@@ -149,7 +149,7 @@ def update_excel():
     # os.startfile("Split_And_Pool_Controler_Updated_test.xlsx")
 
 with generate_button:
-    st.button('Open Excel file', on_click=update_excel)
+    #st.button('Open Excel file', on_click=update_excel)
     if gen_button:
         with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
             st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
