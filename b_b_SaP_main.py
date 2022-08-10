@@ -57,6 +57,7 @@ with col3:
 
 with col4:
     st.markdown('   ')
+    st.markdown('   ')
     generate_button = st.container()
 
 TiprackList = [
