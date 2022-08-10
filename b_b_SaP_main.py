@@ -119,7 +119,7 @@ with col3:
     st.image(image_pip_multi, width=140)
 
 with generate_button:
-    st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
+    gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
                                                                [[tiprack, tiprack_loc], [reservoir, reservoir_loc],
                                                                 [filterPlate, filterPlate_loc], singleChannel,
                                                                 multiChannel],
@@ -152,5 +152,6 @@ def update_excel():
 
 with generate_button:
     st.button('Open Excel file', on_click=update_excel)
-    with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
-        st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
+    if gen_button:
+        with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
+            st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
