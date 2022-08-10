@@ -11,10 +11,12 @@ st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protoc
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
 st.subheader('Automomated DNA barcode synthesis on Opentrons')
-st.markdown('Choose your operating parameters and date for the synthesis - Click on Generate protocol first than on Download protocol - Upload the python file dowloaded on the Opentrons App')
-#st.markdown('Click on Generate protocol first than on Download protocol')
-#st.markdown('Upload the python file dowloaded on the Opentrons App')
-
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown(' 1 - Choose your operating parameters and date for the synthesis <br> 2 - Click on Generate protocol first than on Download protocol', unsafe_allow_html=True)
+with col2:
+    st.markdown('3 - Upload the python file dowloaded on the Opentrons App <br> 4 - Download and fill Excel file for the preparation of reagents and labwares',
+        unsafe_allow_html=True)
 
 def convert(min):
     hour, min = divmod(min, 60)
