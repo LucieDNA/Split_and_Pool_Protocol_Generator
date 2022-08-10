@@ -128,8 +128,8 @@ with st.sidebar:
     asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
     disp_flow_rate = st.text_input('Dispense flow rate', '2', help='relative')
     st.subheader('For precision pipetting')
-    asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '1', help='in mm', key='1')
-    flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative', key='2')
+    asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
+    flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
 
 
 with generate_button:
