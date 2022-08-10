@@ -11,9 +11,9 @@ st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protoc
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
 st.subheader('Automomated DNA barcode synthesis on Opentrons')
-st.markdown('Choose your operating parameters and date for the synthesis')
-st.markdown('Click on Generate protocol first than on Download protocol')
-st.markdown('Upload the python file dowloaded on the Opentrons App')
+st.markdown('Choose your operating parameters and date for the synthesis - Click on Generate protocol first than on Download protocol - Upload the python file dowloaded on the Opentrons App')
+#st.markdown('Click on Generate protocol first than on Download protocol')
+#st.markdown('Upload the python file dowloaded on the Opentrons App')
 
 
 def convert(min):
