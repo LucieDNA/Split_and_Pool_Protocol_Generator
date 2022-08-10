@@ -20,6 +20,7 @@ st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protoc
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
 st.markdown('Choose your operating parameters and date for the synthesis, click on Generate protocol first than on Download protocol')
+st.write("Download Excel file here [link](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler.xlsx)")
 
 def convert(min):
     hour, min = divmod(min, 60)
