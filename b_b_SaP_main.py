@@ -121,6 +121,17 @@ with col4:
 with col3:
     st.image(image_pip_multi)#, width=140)
 
+with st.sidebar:
+    st.header('Advenced parameters')
+    st.subheader('For classic pipetting')
+    asp_depth = st.text_input('Aspirate height above the bottom of the well', '1', help='in mm')
+    asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
+    disp_flow_rate = st.text_input('Dispense flow rate', '2', help='relative')
+    st.subheader('For precision pipetting')
+    asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '1', help='in mm', key='1')
+    flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative', key='2')
+
+
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
                                                                [[tiprack, tiprack_loc], [reservoir, reservoir_loc],
