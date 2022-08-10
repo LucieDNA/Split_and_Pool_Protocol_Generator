@@ -91,9 +91,9 @@ with col1:
     filterPlate = st.selectbox('FilterPlate', FilterPlateList, 1)
 
 with col1_5:
-    st.image(image_tiprack, width=120)
-    st.image(image_reservoir, width=120)
-    st.image(image_filter, width=120)
+    st.image(image_tiprack) #, width=120)
+    st.image(image_reservoir) #, width=120)
+    st.image(image_filter) #, width=120)
 
 with col2:
     tiprack_loc = st.select_slider('Tiprack location', LocationList, '7')
@@ -101,12 +101,12 @@ with col2:
     filterPlate_loc = st.select_slider('FilterPlate location', LocationList, '6')
 
 with col3:
-    st.image(image_deck, width=310)
+    st.image(image_deck)#, width=310)
 
 col1, col2, col3, col4 = st.columns([1, 2.5, 1, 2.5])
 
 with col1:
-    st.image(image_pip_single, width=140)
+    st.image(image_pip_single)#, width=140)
 
 with col2:
     singleChannel = st.radio('Pipette SingleChannel placement', ('Right', 'Left'), index=0)
@@ -117,7 +117,7 @@ with col4:
     st.radio('Pipette MultiChannel generation', ('GEN2', 'GEN1'), index=0)
 
 with col3:
-    st.image(image_pip_multi, width=140)
+    st.image(image_pip_multi)#, width=140)
 
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
