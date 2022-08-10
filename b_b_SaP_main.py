@@ -122,7 +122,7 @@ with col3:
     st.image(image_pip_multi)#, width=140)
 
 with st.sidebar:
-    st.header('Advenced parameters')
+    st.header('Advanced parameters')
     st.subheader('For classic pipetting')
     asp_depth = st.text_input('Aspirate height above the bottom of the well', '1', help='in mm')
     asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
