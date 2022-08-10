@@ -128,8 +128,6 @@ with generate_button:
 
 
 def update_excel():
-    os.system("taskkill /F /IM excel.exe")
-    time.sleep(1)
     workbook = load_workbook(filename="Split_And_Pool_Controler.xlsx")
     sheet = workbook.active
 
