@@ -7,15 +7,6 @@ from openpyxl import load_workbook
 import time
 import datetime
 
-
-## Unmoved parameters
-asp_depth = '1'
-asp_flow_rate = '1.5'
-disp_flow_rate = '2'
-asp_depth_precision = '0.9'
-flow_rate = '0.8'
-
-
 st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protocol generator</h1>", unsafe_allow_html=True)
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
