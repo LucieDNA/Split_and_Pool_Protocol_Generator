@@ -19,6 +19,7 @@ flow_rate = '0.8'
 st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protocol generator</h1>", unsafe_allow_html=True)
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
+st.markdown('Choose your operating parameters and date for the synthesis, click on Generate protocol first than on Download protocol')
 
 def convert(min):
     hour, min = divmod(min, 60)
