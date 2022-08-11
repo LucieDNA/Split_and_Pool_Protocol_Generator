@@ -28,7 +28,9 @@ image_pip_multi = Image.open("images/Pipettes_multi.jpg")
 
 image_tiprack = Image.open("images/Tiprack.PNG")
 image_reservoir = Image.open("images/USA_reservoir.PNG")
-image_filter = Image.open("images/Pall_on_mani.PNG")
+
+image_filter_pall = Image.open("images/Pall_on_mani.PNG")
+image_filter_grenier = Image.open("images/Grenier.PNG")
 
 col1, col2, col3, col4 = st.columns([1, 1.5, 0.7, 1], gap="medium")
 
@@ -91,7 +93,10 @@ with col1:
 with col1_5:
     st.image(image_tiprack) #, width=120)
     st.image(image_reservoir) #, width=120)
-    st.image(image_filter) #, width=120)
+    if filterPlate == 'pall_96_wellplate_350ul_manifold':
+        st.image(image_filter_pall) #, width=120)
+    else :
+        st.image(image_filter_grenier) #, width=120)
 
 with col2:
     tiprack_loc = st.select_slider('Tiprack location', LocationList, '7')
