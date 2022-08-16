@@ -57,7 +57,7 @@ with col3:
 
 with col4:
     st.markdown('   ')
-    st.write("Download Excel file [here](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler.xlsx)")
+    st.write("Download Excel file [here](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler.xlsm)")
     generate_button = st.container()
 
 TiprackList = [
