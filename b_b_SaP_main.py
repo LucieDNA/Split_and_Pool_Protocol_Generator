@@ -156,7 +156,7 @@ with st.sidebar:
     st.subheader('Post Synthesis Process')
     simple_psp = st.checkbox('Simple PSP')
     if simple_psp:
-        well_psp = st.text_input('Well for the sample on the desalting plate', "0")
+        well_psp = st.text_input('Well for the sample on the desalting plate', "1")
     double_psp = st.checkbox('Double PSP')
     if double_psp:
         well_psp_sample = st.text_input('Well for the sample on the desalting plate', "0")
