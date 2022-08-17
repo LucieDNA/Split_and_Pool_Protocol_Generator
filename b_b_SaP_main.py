@@ -161,7 +161,7 @@ with st.sidebar:
     if double_psp:
         well_psp_sample = st.text_input('Well for the sample on the desalting plate', "0")
         well_psp_control = st.text_input('Well for the control on the desalting plate', "1")
-        well_psp = [well_psp_sample; well_psp_control]
+        well_psp = [well_psp_sample, well_psp_control]
 
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
