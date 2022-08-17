@@ -154,6 +154,7 @@ with st.sidebar:
     asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
     flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
     st.subheader('Post Synthesis Process')
+    well_psp = None
     simple_psp = st.checkbox('Simple PSP')
     if simple_psp:
         well_psp = st.text_input('Well for the sample on the desalting plate', "1")
