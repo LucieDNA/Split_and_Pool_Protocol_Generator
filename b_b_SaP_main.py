@@ -119,6 +119,9 @@ with col1 :
 with col2:
     st.write("[Custom Labware Creator](https://labware.opentrons.com/create/)")
 
+with col3:
+    st.write("Dowload filterPlate labware file and import it on the Opentrons App")
+    
 col1, col2, col3, col4 = st.columns([1, 2.5, 1, 2.5])
 
 with col1:
