@@ -60,6 +60,12 @@ with col4:
     st.write("Download Excel file [here](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler.xlsm)")
     generate_button = st.container()
 
+col1, col2 = st.columns([1.5, 1.5])
+with col1:
+    start_seq = st.text_input('Addition of sequence at the beginning', '')
+with col2:
+    end_seq = st.text_input('Addition of sequence at the end', 'ATCGAATCGA')
+
 TiprackList = [
                 "opentrons_96_tiprack_300ul",
             ]
