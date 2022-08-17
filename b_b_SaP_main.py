@@ -126,6 +126,7 @@ with col2:
     st.write("[Custom Labware Creator](https://labware.opentrons.com/create/)")
 
 
+error_pipette = st.container()
     
 col1, col2, col3, col4 = st.columns([1, 2.5, 1, 2.5])
 
@@ -142,6 +143,10 @@ with col4:
 
 with col3:
     st.image(image_pip_multi)#, width=140)
+    
+with error_pipette:
+    if singleChannel == multiChannel:
+        st.error('Both pipettes can't be on the same side')
 
 with st.sidebar:
     st.header('Advanced parameters')
