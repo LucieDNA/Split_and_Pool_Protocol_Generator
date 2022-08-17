@@ -114,7 +114,7 @@ with col2:
     filterPlate_loc = st.select_slider('FilterPlate location', LocationList, '6')
     with error_labware:
         if tiprack_loc == reservoir_loc or tiprack_loc == filterPlate_loc or reservoir_loc == filterPlate_loc:
-            st.error("Labware must be on different locations")
+            st.warning("Labware must be on different locations")
 
 with col3:
     st.image(image_deck)#, width=310)
