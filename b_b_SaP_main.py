@@ -146,7 +146,7 @@ with col3:
     
 with error_pipette:
     if singleChannel == multiChannel:
-        st.error('Both pipettes can't be on the same side')
+        st.error("Both pipettes can't be on the same side")
 
 with st.sidebar:
     st.header('Advanced parameters')
