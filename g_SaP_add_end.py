@@ -1,12 +1,10 @@
 from e_SaP_elementaryCommands import *
 
 
-def add_end_seq(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well):
-    add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, 'A')
-    add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, 'T')
-    add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, 'C')
-    add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, 'G')
-    add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, 'A')
+def add_end_seq(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, end_seq):
+    if end_seq is not '':
+        for base in end_seq:
+            add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base)
 
 
 def add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base):
