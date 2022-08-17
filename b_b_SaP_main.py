@@ -165,7 +165,7 @@ with st.sidebar:
         well_psp = [well_psp_sample, well_psp_control]
     if simple_psp and double_psp:
         with warning:
-            st.warning('Choose only one option for PSP')
+            st.warning('Choose only one option', icon="⚠️")
 
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
