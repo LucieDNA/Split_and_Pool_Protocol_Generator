@@ -165,23 +165,21 @@ with st.sidebar:
         asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
         flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
         submitted = st.form_submit_button("Submit")
-    with st.form('my_form_3'):
-        st.subheader('Post Synthesis Process')
-        well_psp = None
-        warning = st.container()
-        simple_psp = st.checkbox('Simple PSP')
-        if simple_psp:
-            well_psp = st.text_input('Well for the sample on the desalting plate', "1")
-        double_psp = st.checkbox('Double PSP')
-        if double_psp:
-            well_psp_sample = st.text_input('Well for the sample on the desalting plate', "0")
-            well_psp_control = st.text_input('Well for the control on the desalting plate', "1")
-            well_psp = [well_psp_sample, well_psp_control]
-        if simple_psp and double_psp:
-            with warning:
-                st.warning('Choose only one option')
-        submitted = st.form_submit_button("Submit")
-
+    st.subheader('Post Synthesis Process')
+    well_psp = None
+    warning = st.container()
+    simple_psp = st.checkbox('Simple PSP')
+    if simple_psp:
+          well_psp = st.text_input('Well for the sample on the desalting plate', "1")
+    double_psp = st.checkbox('Double PSP')
+    if double_psp:
+        well_psp_sample = st.text_input('Well for the sample on the desalting plate', "0")
+        well_psp_control = st.text_input('Well for the control on the desalting plate', "1")
+        well_psp = [well_psp_sample, well_psp_control]
+    if simple_psp and double_psp:
+        with warning:
+            st.warning('Choose only one option')
+        
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
                                                                [[tiprack, tiprack_loc], [reservoir, reservoir_loc],
