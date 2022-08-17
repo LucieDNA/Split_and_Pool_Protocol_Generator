@@ -8,7 +8,7 @@ from g_SaP_add_end import *
 
 
 
-def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq):
+def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq, single_psp, double_psp, well_psp):
 
     MARC_COMPORT = None
     MARC_COMPORT = "/dev/ttyACM0"
@@ -253,10 +253,12 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
     # Addition of an end sequence
     add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
-
-    #psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
-    double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
-
+    
+    if double_psp:
+        double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
+    if single_psp:
+        psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)    
+        
     # STOP HEATING
     stopHeating(protocolFile, MARC_COMPORT)
 
