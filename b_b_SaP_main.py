@@ -87,7 +87,7 @@ LocationList = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
 
 st.markdown('   ')
 st.markdown('   ')
-st.markdown('Choose Opentrons set up')
+st.markdown('**Choose Opentrons set up**')
 
 col1, col1_5, col2, col3 = st.columns([1.5, 0.5, 1, 1.2])
 
