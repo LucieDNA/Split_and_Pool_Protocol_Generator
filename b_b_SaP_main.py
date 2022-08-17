@@ -89,6 +89,9 @@ with col1:
     tiprack = st.selectbox('Tiprack', TiprackList, 0)
     reservoir = st.selectbox('ReagentReservoir', ReagentReservoirList, 0)
     filterPlate = st.selectbox('FilterPlate', FilterPlateList, 1)
+    
+    with open('pall_96_wellplate_350ul_manifold.json') as file:
+            st.download_button('Download filterPlate labware file', data=file, file_name='pall_96_wellplate_350ul_manifold.json')
 
 with col1_5:
     st.image(image_tiprack) #, width=120)
