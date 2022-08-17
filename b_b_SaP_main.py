@@ -90,7 +90,9 @@ with col1:
     reservoir = st.selectbox('ReagentReservoir', ReagentReservoirList, 0)
     filterPlate = st.selectbox('FilterPlate', FilterPlateList, 1)
     
-   
+    #with open('pall_96_wellplate_350ul_manifold.json') as file:
+    #        st.download_button('Download filterPlate labware file', data=file, file_name='pall_96_wellplate_350ul_manifold.json')
+    #st.write("[Custom Labware Creator](https://labware.opentrons.com/create/)")
 
 with col1_5:
     st.image(image_tiprack) #, width=120)
@@ -108,11 +110,11 @@ with col2:
 with col3:
     st.image(image_deck)#, width=310)
     
-col1, col2 = st.columns([1, 2])
+col1, col2, col3 = st.columns([1, 1, 5])
 
 with col1 : 
-     with open('pall_96_wellplate_350ul_manifold.json') as file:
-            st.download_button('Download filterPlate labware file', data=file, file_name='pall_96_wellplate_350ul_manifold.json')
+     with open('pall_96_wellp#late_350ul_manifold.json') as file:
+           st.download_butto#n('Download filterPlate labware file', data=file, file_name='pall_96_wellplate_350ul_manifold.json')
     
 with col2:
     st.write("[Custom Labware Creator](https://labware.opentrons.com/create/)")
