@@ -154,8 +154,9 @@ with error_pipette:
 
 with st.sidebar:
     st.header('Advanced parameters')
-    with st.form('For classic pipetting'):
-        asp_depth = st.text_input('Aspirate height above the bottom of the well', '1', help='in mm')
+    with st.form():
+        st.subheader('For classic pipetting')
+        asp_depth = st.text_input('Aspirate height above bottom of the well', '1', help='in mm')
         asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
         disp_flow_rate = st.text_input('Dispense flow rate', '2', help='relative')
         submitted = st.form_submit_button("Submit")
