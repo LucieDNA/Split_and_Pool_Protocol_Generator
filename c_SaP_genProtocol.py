@@ -65,7 +65,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     
     vacuum(protocolFile, MARC_COMPORT, 25)
     # Addition of an end sequence
-    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, 0, end_seq)
+    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, 0, start_seq)
 
     # Empty first well and pickup first tips
     startVac(protocolFile, MARC_COMPORT)
