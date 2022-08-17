@@ -32,7 +32,7 @@ image_reservoir = Image.open("images/USA_reservoir.PNG")
 image_filter_pall = Image.open("images/Pall_on_mani.PNG")
 image_filter_grenier = Image.open("images/Grenier.PNG")
 
-col1, col2, col3, col4 = st.columns([1, 1.5, 0.7, 1], gap="medium")
+col1, col2, col3, col4 = st.columns([1, 1.5, 0.7, 1.3], gap="medium")
 
 with col1:
     conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
