@@ -150,7 +150,7 @@ with col3:
     
 with error_pipette:
     if singleChannel == multiChannel:
-        st.error("Both pipettes can't be on the same side")
+        st.warning("Both pipettes can't be on the same side")
 
 with st.sidebar:
     st.header('Advanced parameters')
@@ -174,7 +174,7 @@ with st.sidebar:
         well_psp = [well_psp_sample, well_psp_control]
     if simple_psp and double_psp:
         with warning:
-            st.error('Choose only one option')
+            st.warning('Choose only one option')
 
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
