@@ -3,7 +3,7 @@ from e_SaP_elementaryCommands import *
 
 def psp_for_SaP(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, well_psp):
 
-    sample_well = well_psp
+    sample_well = int(well_psp)
 
     # Pipets and labware definition
 
