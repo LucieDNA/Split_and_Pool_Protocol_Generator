@@ -8,7 +8,7 @@ from g_SaP_add_end import *
 
 
 
-def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date):
+def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq):
 
     MARC_COMPORT = None
     MARC_COMPORT = "/dev/ttyACM0"
@@ -62,6 +62,10 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     startHeating(protocolFile, MARC_COMPORT)
     pause_WL(protocolFile)
     delay_WL(protocolFile, 2)
+    
+    vacuum(protocolFile, MARC_COMPORT, 25)
+    # Addition of an end sequence
+    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, 0, end_seq)
 
     # Empty first well and pickup first tips
     startVac(protocolFile, MARC_COMPORT)
@@ -248,8 +252,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     vacuum(protocolFile, MARC_COMPORT, 25)
 
     # Addition of an end sequence
-    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
-    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
+    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
 
     #psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
     double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
