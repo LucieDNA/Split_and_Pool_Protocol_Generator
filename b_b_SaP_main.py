@@ -161,7 +161,7 @@ with generate_button:
                                                                 [filterPlate, filterPlate_loc], singleChannel,
                                                                 multiChannel],
                                                                [asp_depth, asp_flow_rate, disp_flow_rate],
-                                                               [asp_depth_precision, flow_rate], synthesis_date])
+                                                               [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq])
 
 
 def update_excel():
