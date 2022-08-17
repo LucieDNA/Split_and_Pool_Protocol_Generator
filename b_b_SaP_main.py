@@ -117,7 +117,7 @@ with col3:
     st.image(image_deck)#, width=310)
     
 
-st.write("Dowload filterPlate labware file and import it on the Opentrons App")
+#st.write("Dowload filterPlate labware file and import it on the Opentrons App")
 col1, col2, col3 = st.columns([1.7, 1.5, 4])
 with col1 : 
      with open('pall_96_wellplate_350ul_manifold.json') as file:
