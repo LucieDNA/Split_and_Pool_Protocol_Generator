@@ -113,7 +113,7 @@ with col3:
 col1, col2, col3 = st.columns([1, 1, 5])
 
 with col1 : 
-     with open('pall_96_wellp#late_350ul_manifold.json') as file:
+     with open('pall_96_wellplate_350ul_manifold.json') as file:
            st.download_button('Download filterPlate labware file', data=file, file_name='pall_96_wellplate_350ul_manifold.json')
     
 with col2:
