@@ -171,7 +171,7 @@ with generate_button:
                                                                [asp_depth, asp_flow_rate, disp_flow_rate],
                                                                [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq, simple_psp, double_psp, well_psp])
     if gen_button:
-        st.success('Protocol successfully generated, click on Download protocol')
+        st.success('Protocol successfully generated, click on *Download protocol*')
 
 def update_excel():
     workbook = load_workbook(filename="Split_And_Pool_Controler.xlsx")
