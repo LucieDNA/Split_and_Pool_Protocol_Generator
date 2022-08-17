@@ -110,7 +110,7 @@ with col2:
 with col3:
     st.image(image_deck)#, width=310)
     
-col1, col2, col3 = st.columns([1.6, 1.5, 4])
+col1, col2, col3 = st.columns([1.7, 1.5, 4])
 
 with col1 : 
      with open('pall_96_wellplate_350ul_manifold.json') as file:
