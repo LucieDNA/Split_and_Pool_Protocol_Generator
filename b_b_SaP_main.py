@@ -154,6 +154,7 @@ with st.sidebar:
     flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
     st.subheader('Post Synthesis Process')
     well_psp = None
+    warning = st.container()
     simple_psp = st.checkbox('Simple PSP')
     if simple_psp:
         well_psp = st.text_input('Well for the sample on the desalting plate', "1")
@@ -163,7 +164,8 @@ with st.sidebar:
         well_psp_control = st.text_input('Well for the control on the desalting plate', "1")
         well_psp = [well_psp_sample, well_psp_control]
     if simple_psp and double_psp:
-        st.warning('Choose only one option for PSP')
+        with warning:
+            st.warning('Choose only one option for PSP')
 
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
