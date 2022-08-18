@@ -117,7 +117,8 @@ with col2:
             st.warning("Labware must be on different locations")
 
 with col3:
-    st.image(image_deck)#, width=310)
+    image_deck_2 = Image.open('images/'+str(tiprack_loc)+'_'+str(reservoir_loc)+'_'+str(filterPlate_loc)+'.png')
+    st.image(image_deck_2)#, width=310)
     
 
 #st.write("Dowload filterPlate labware file and import it on the Opentrons App")
