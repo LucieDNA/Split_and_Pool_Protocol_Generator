@@ -155,17 +155,7 @@ with error_pipette:
 
 with st.sidebar:
     st.header('Advanced parameters')
-    with st.form('my_form'):
-        st.subheader('For classic pipetting')
-        asp_depth = st.text_input('Aspirate height above bottom of the well', '1', help='in mm')
-        asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
-        disp_flow_rate = st.text_input('Dispense flow rate', '2', help='relative')
-        submitted = st.form_submit_button("Submit")
-    with st.form('my_form_2'):
-        st.subheader('For precision pipetting')
-        asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
-        flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
-        submitted = st.form_submit_button("Submit")
+   
     st.subheader('Post Synthesis Process')
     well_psp = None
     warning = st.container()
@@ -180,6 +170,18 @@ with st.sidebar:
     if simple_psp and double_psp:
         with warning:
             st.warning('Choose only one option')
+     
+     with st.form('my_form'):
+        st.subheader('For classic pipetting')
+        asp_depth = st.text_input('Aspirate height above bottom of the well', '1', help='in mm')
+        asp_flow_rate = st.text_input('Aspirate flow rate', '1.5', help='relative')
+        disp_flow_rate = st.text_input('Dispense flow rate', '2', help='relative')
+        submitted = st.form_submit_button("Submit")
+    with st.form('my_form_2'):
+        st.subheader('For precision pipetting')
+        asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
+        flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
+        submitted = st.form_submit_button("Submit")
         
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
