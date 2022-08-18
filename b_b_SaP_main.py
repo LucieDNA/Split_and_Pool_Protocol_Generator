@@ -155,7 +155,6 @@ with error_pipette:
 
 with st.sidebar:
     st.header('Advanced parameters')
-   
     st.subheader('Post Synthesis Process')
     well_psp = None
     warning = st.container()
@@ -170,7 +169,6 @@ with st.sidebar:
     if simple_psp and double_psp:
         with warning:
             st.warning('Choose only one option')
-     
      with st.form('my_form'):
         st.subheader('For classic pipetting')
         asp_depth = st.text_input('Aspirate height above bottom of the well', '1', help='in mm')
