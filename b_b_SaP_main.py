@@ -6,6 +6,7 @@ import os
 from openpyxl import load_workbook
 import time
 import datetime
+import panda as pd
 
 st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protocol generator</h1>", unsafe_allow_html=True)
 #st.title('Split and Pool protocol generator')
@@ -217,3 +218,9 @@ with generate_button:
     if gen_button:
         with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
             st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
+
+df = pd.DataFrame(
+    np.random.randn(10, 5),
+    columns=('col %d' % i for i in range(5)))
+
+table = st.table(df)
