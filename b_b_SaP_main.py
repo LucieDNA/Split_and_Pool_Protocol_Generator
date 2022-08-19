@@ -251,7 +251,7 @@ df = pd.DataFrame(
 def color_negative(v, color):
     return 'background-color: green'
 df = pd.DataFrame(pd.DataFrame(
-    table_volume,
+    np.empty((8,8),
     columns=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')))
  
 
