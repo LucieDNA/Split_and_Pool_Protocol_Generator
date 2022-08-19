@@ -240,9 +240,7 @@ for i in range(4):
     table_volume[i,4] = volume_W2
 
 def color_reageants(s):
-    if s != 0:
-        return f'background-color: green'
-    return f'background-color: red'
+    return ['background-color: green']*len(s)
         
 
 df = pd.DataFrame(
