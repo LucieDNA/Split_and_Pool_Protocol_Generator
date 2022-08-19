@@ -252,7 +252,7 @@ def color_negative(v, color):
     return 'background-color: green'
 df = pd.DataFrame(pd.DataFrame(
     table_volume,
-    columns=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'))
+    columns=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')))
  
 
 table = st.table(df.style.applymap(color_negative, color='red', subset="A"))
