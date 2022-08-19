@@ -224,7 +224,7 @@ with generate_button:
 
 df = pd.DataFrame(
     np.empty((8,12)),
-    rows=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+    index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
 table = st.table(df)
