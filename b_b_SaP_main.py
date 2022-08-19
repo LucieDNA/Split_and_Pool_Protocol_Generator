@@ -222,8 +222,18 @@ with generate_button:
             st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
 
 
+
+volume_nucleotide = 0.025 * number_of_cycle+0.1
+volume_enzyme = 0.025 * number_of_cycle+0.1
+volume_W1 = 0.050 * number_of_cycle+0.1
+volume_D = 0.100 * number_of_cycle+0.1
+volume_W2 = 0.050 * number_of_cycle+0.1            
+
+table_volume = np.np.empty((8,12))
+table_volume[0,0] = volume_nucleotide
+
 df = pd.DataFrame(
-    np.empty((8,12)),
+    table_volume,
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
