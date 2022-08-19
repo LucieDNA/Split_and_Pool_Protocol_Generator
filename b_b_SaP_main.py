@@ -248,6 +248,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
-df.style.applymap(color_reageants)
 
-table = st.table(df)
+
+table = st.table(df.style.applymap(color_reageants))
