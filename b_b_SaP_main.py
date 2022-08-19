@@ -248,5 +248,5 @@ df = pd.DataFrame(
     columns=(str(i) for i in range(1,13)))
 
 table = st.table(df.style.applymap(color_reageants, subset="1"))    
-table = st.table(df.style.apply(color_reageants, axis=0, subset="A"))
+
 
