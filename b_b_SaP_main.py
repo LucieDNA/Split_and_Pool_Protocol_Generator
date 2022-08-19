@@ -256,4 +256,4 @@ df = pd.DataFrame(pd.DataFrame(
     columns=(i for i in range(1,13))))
  
 
-table = st.table(df.style.applymap(color_negative, color='red', subset="A"))
+table = st.table(df.style.applymap(color_negative, color='red', subset="1"))
