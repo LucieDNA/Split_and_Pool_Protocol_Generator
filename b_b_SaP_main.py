@@ -243,10 +243,6 @@ def color_reageants(cell):
     return 'background-color: green'
         
 
-df = pd.DataFrame(
-    table_volume,
-    index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
-    columns=(i for i in range(1,13)))
 
 def color_negative(v, color):
     return 'background-color: green'
@@ -256,4 +252,9 @@ df = pd.DataFrame(pd.DataFrame(
     columns=(str(i) for i in range(1,13))))
  
 
-table = st.table(df.style.applymap(color_negative, color='red', subset="1"))
+df = pd.DataFrame(
+    table_volume,
+    index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+    columns=(str(i) for i in range(1,13)))
+    
+table = st.table(df.style.applymap(color_reageants, subset="1"))
