@@ -401,11 +401,11 @@ def double_psp_for_SaP(protocolFile, multi_pipet, single_pipet, labware_list, MA
     aspirate_PSP_SaP_WL(protocolFile, pipet300_single, FilterPlate, control_well, AIR_GAP_VOL, ASP_FLOW_RATE)
     dispense_PSP_SaP_WL(protocolFile, pipet300_single, FilterPlate, control_well, 200 + 2 * AIR_GAP_VOL, DISP_FLOW_RATE)
     aspirate_PSP_SaP_WL(protocolFile, pipet300_single, FilterPlate, control_well, AIR_GAP_VOL, ASP_FLOW_RATE)
-
+    
     # Stir, wait and vacuum
     startStirring(protocolFile, MARC_COMPORT)
     return_WL(protocolFile, pipet300_single)
     return_WL(protocolFile, pipet300_multi)
-    delay_WL(protocolFile, seconds=50, minutes=14)
+    delay_WL(protocolFile, seconds=30)
     stopStirring(protocolFile, MARC_COMPORT)
-    vacuum(protocolFile, MARC_COMPORT, 25)
+    vacuum(protocolFile, MARC_COMPORT, 900)
