@@ -249,9 +249,9 @@ df = pd.DataFrame(
     columns=(i for i in range(1,13)))
 
 def color_negative(v, color):
-    return f"color: {color};" if v < 0 else None
+    return 'background-color: green'
 df = pd.DataFrame(np.random.randn(5, 2), columns=["A", "B"])
  
 
 
-table = st.table(df.style.applymap(color_negative, color='red'))
+table = st.table(df.style.applymap(color_negative, color='red', subset="A"))
