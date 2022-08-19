@@ -253,7 +253,7 @@ def color_negative(v, color):
 df = pd.DataFrame(pd.DataFrame(
     table_volume,
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
-    columns=(str(i) for i in range(1,13)))
+    columns=(str(i) for i in range(1,13))))
  
 
 table = st.table(df.style.applymap(color_negative, color='red', subset="1"))
