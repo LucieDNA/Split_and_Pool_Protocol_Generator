@@ -4,3 +4,4 @@ Pillow==9.2.0
 pyserial==3.5
 streamlit==1.11.1
 xlrd==2.0.1
+Panda==60.2.0
