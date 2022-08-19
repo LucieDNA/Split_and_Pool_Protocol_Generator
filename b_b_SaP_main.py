@@ -249,6 +249,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
-df.style.apply(color_reageants, color='red', subset=[0,1])
+df.style.apply(color_reageants)
 
 table = st.table(df)
