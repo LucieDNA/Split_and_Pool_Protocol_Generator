@@ -223,7 +223,8 @@ with generate_button:
 
 
 df = pd.DataFrame(
-    np.empty((3,5)),
-    columns=('col %d' % i for i in range(5)))
+    np.empty((8,12)),
+    rows=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+    columns=(i for i in range(1,13))
 
 table = st.table(df)
