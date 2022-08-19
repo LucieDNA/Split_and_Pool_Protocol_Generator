@@ -229,7 +229,7 @@ volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
 volume_W2 = 0.050 * number_of_cycle+0.1
 
-color_enzyme = 'background-color: 'bleu''
+color_enzyme = 'background-color: 'blue''
 
 table_volume = np.empty((8,12))
 for i in range(4):
