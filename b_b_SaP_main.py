@@ -239,8 +239,8 @@ for i in range(4):
     table_volume[i,3] = volume_D
     table_volume[i,4] = volume_W2
 
-def color_reageants(s):
-    return ['background-color: green']*len(s)
+def color_reageants(cell):
+    return 'background-color: green'
         
 
 df = pd.DataFrame(
@@ -248,6 +248,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
-df.style.apply(color_reageants, axis=1)
+df.style.applymap(color_reageants)
 
 table = st.table(df)
