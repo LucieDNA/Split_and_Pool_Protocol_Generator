@@ -248,6 +248,10 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
 
+def color_negative(v, color):
+    return f"color: {color};" if v < 0 else None
+df = pd.DataFrame(np.random.randn(5, 2), columns=["A", "B"])
+df.style.applymap(color_negative, color='red')  
 
 
 table = st.table(df.style.applymap(color_reageants, subset='1'))
