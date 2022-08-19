@@ -229,7 +229,7 @@ volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
 volume_W2 = 0.050 * number_of_cycle+0.1            
 
-table_volume = np.np.empty((8,12))
+table_volume = np.empty((8,12))
 table_volume[0,0] = volume_nucleotide
 
 df = pd.DataFrame(
