@@ -242,6 +242,7 @@ for i in range(4):
 def color_reageants(s):
     if s != 0:
         return f'background-color: green'
+    return f'background-color: red'
         
 
 df = pd.DataFrame(
