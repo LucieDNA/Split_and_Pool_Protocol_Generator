@@ -449,23 +449,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     stopStirring(protocolFile, MARC_COMPORT)
     # Transfer 3
     transfer_whole_wells(protocolFile, work_well, pool_well, 80, volume_SaP)
-    # Vacuum
-    startVac(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=2, minutes=0)
-    startVent(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, 6, 0)
-    stopVac(protocolFile, MARC_COMPORT)
-    home_made_airgap(protocolFile, pipet300_multi, ReagentReservoir, 56, AIR_GAP_VOL)
-    aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 56, volume_SaP / 4, ASP_FLOW_RATE)
-    home_made_airgap(protocolFile, pipet300_multi, ReagentReservoir, 56, AIR_GAP_VOL)
-    stopVent(protocolFile, MARC_COMPORT)
-    # Fill the wells
-    dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, work_well, volume_SaP / 4 + 2 * AIR_GAP_VOL,
-                    DISP_FLOW_RATE)
-    blow_out_WL(protocolFile, pipet300_multi)
-    home_made_airgap(protocolFile, pipet300_multi, FilterPlate, work_well, AIR_GAP_VOL)
-    # Transfer 4
-    transfer_whole_wells(protocolFile, work_well, pool_well, 56, volume_SaP)
+
 
     # Return tips
     return_WL(protocolFile, pipet300_multi)
