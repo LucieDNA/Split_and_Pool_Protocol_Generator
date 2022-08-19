@@ -227,7 +227,9 @@ volume_nucleotide = 0.025 * number_of_cycle+0.1
 volume_enzyme = 0.025 * number_of_cycle+0.1
 volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
-volume_W2 = 0.050 * number_of_cycle+0.1            
+volume_W2 = 0.050 * number_of_cycle+0.1
+
+color_enzyme = 'background-color: 'bleu''
 
 table_volume = np.empty((8,12))
 for i in range(4):
@@ -242,5 +244,7 @@ df = pd.DataFrame(
     table_volume,
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(i for i in range(1,13)))
+
+df.style.apply(color_enzyme, [0,1])
 
 table = st.table(df)
