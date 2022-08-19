@@ -223,7 +223,7 @@ with generate_button:
 
 
 df = pd.DataFrame(
-    np.array(5)
+    np.empty((3,5)),
     columns=('col %d' % i for i in range(5)))
 
 table = st.table(df)
