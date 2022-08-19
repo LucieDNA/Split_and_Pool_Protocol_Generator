@@ -230,7 +230,13 @@ volume_D = 0.100 * number_of_cycle+0.1
 volume_W2 = 0.050 * number_of_cycle+0.1            
 
 table_volume = np.empty((8,12))
-table_volume[0,0] = volume_nucleotide
+for i in range(4):
+    table_volume[i,0] = volume_nucleotide
+    table_volume[i,1] = volume_enzyme
+    table_volume[i,2] = volume_W1
+    table_volume[i,3] = volume_D
+    table_volume[i,4] = volume_W2
+
 
 df = pd.DataFrame(
     table_volume,
