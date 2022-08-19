@@ -7,6 +7,8 @@ from openpyxl import load_workbook
 import time
 import datetime
 import pandas as pd
+import numpy as np
+
 
 st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protocol generator</h1>", unsafe_allow_html=True)
 #st.title('Split and Pool protocol generator')
