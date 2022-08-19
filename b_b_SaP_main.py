@@ -221,7 +221,6 @@ with generate_button:
 
 
 df = pd.DataFrame(
-    np.random.randn(10, 5),
     columns=('col %d' % i for i in range(5)))
 
 table = st.table(df)
