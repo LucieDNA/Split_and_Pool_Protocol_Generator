@@ -250,4 +250,4 @@ df = pd.DataFrame(
 
 
 
-table = st.table(df.style.apply(color_reageants, axis=0, subset=['A']))
+table = st.table(df.style.apply(color_reageants, axis=0, subset=['1']))
