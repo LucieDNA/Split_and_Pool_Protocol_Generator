@@ -241,7 +241,7 @@ for i in range(4):
 
 def color_reageants(s):
     if s is not None:
-        return = 'background-color: green'
+        return 'background-color: green'
         
 
 df = pd.DataFrame(
