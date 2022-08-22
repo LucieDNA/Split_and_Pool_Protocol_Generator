@@ -223,7 +223,7 @@ with generate_button:
 
 
 
-volume_nucleotide = 0.025 * number_of_cycle+0.1
+volume_nucleotide = str((0.025 * number_of_cycle+0.1)*1000)
 volume_enzyme = 0.025 * number_of_cycle+0.1
 volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
@@ -233,7 +233,7 @@ color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '')
 for i in range(4):
-    table_volume[i,0] = 'A = '+str(volume_nucleotide*1000)+' µL'
+    table_volume[i,0] = 'A = '+volume_nucleotide+' µL'
     table_volume[i,1] = volume_enzyme*1000
     table_volume[i,2] = round(volume_W1,3)*1000
     table_volume[i,3] = round(volume_D,3)*1000
