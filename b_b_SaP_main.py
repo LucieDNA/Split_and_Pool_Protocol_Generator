@@ -248,7 +248,7 @@ pooling_solution = 'W2'
 
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), '            ')
+table_volume = np.full((8,12), '                  ')
 table_volume[0,0] = "A = " + volume_nucleotide+" µL"
 table_volume[1,0] = "C = " + volume_nucleotide+" µL"
 table_volume[2,0] = "G = " + volume_nucleotide+" µL"
@@ -270,7 +270,7 @@ for i in range(4):
     table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
 
 def color_reageants(cell):
-    if cell == '            ':
+    if cell == '                  ':
         return 'background-color: #ffffff'
     if cell == "A = " + volume_nucleotide+" µL":
         return 'background-color: #ebe7f2'
@@ -296,6 +296,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-table = st.dataframe(df.style.applymap(color_reageants), width=300)    
+table = st.dataframe(df.style.applymap(color_reageants), width=1000)    
 
 
