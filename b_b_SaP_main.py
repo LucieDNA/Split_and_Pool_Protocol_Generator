@@ -233,7 +233,7 @@ color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), 0)
 for i in range(4):
-    table_volume[i,0] = 'A = '+volume_nucleotide*1000+' µL'
+    table_volume[i,0] = 'A = '+str(volume_nucleotide*1000)+' µL'
     table_volume[i,1] = round(volume_enzyme,3)*1000
     table_volume[i,2] = round(volume_W1,3)*1000
     table_volume[i,3] = round(volume_D,3)*1000
