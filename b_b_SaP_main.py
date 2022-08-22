@@ -234,7 +234,7 @@ vol_nuc = "A = " + volume_nucleotide+" µL"
 st.write(vol_nuc)
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), '           ')
+table_volume = np.full((8,12), '        ')
 table_volume[0,0] = "A = " + volume_nucleotide+" µL"
 table_volume[1,0] = "C = " + volume_nucleotide+" µL"
 table_volume[2,0] = "G = " + volume_nucleotide+" µL"
