@@ -247,7 +247,9 @@ for i in range(4):
 def color_reageants(cell):
     if cell == '           ':
         return 'background-color: #ffffff'
-    if cell != '           ':
+    if cell == "A = " + volume_nucleotide+" µL":
+        return 'background-color: #c4b6d9'
+    if cell == "C = " + volume_nucleotide+" µL":
         return 'background-color: #c4b6d9'
       
 df = pd.DataFrame(
