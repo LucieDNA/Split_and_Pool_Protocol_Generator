@@ -234,7 +234,7 @@ vol_nuc = "A = " + volume_nucleotide+" µL"
 st.write(vol_nuc)
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), '        ')
+table_volume = np.full((8,12), '           ')
 table_volume[0,0] = "A = " + volume_nucleotide+" µL"
 table_volume[1,0] = "C = " + volume_nucleotide+" µL"
 table_volume[2,0] = "G = " + volume_nucleotide+" µL"
@@ -247,7 +247,7 @@ for i in range(4):
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
 
 def color_reageants(cell):
-    if cell is not '':
+    if cell is not '           ':
         return 'background-color: #c4b6d9'
       
 df = pd.DataFrame(
