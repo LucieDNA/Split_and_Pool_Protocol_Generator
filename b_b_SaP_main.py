@@ -241,7 +241,7 @@ for i in range(4):
 
 def color_reageants(cell):
     if cell != 0:
-        return 'background-color: green'
+        return 'background-color: red'
         
 df = pd.DataFrame(
     table_volume,
