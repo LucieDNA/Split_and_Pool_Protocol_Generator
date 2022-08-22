@@ -229,12 +229,12 @@ volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
 volume_W2 = 0.050 * number_of_cycle+0.1
 
-vol_nuc = volume_nucleotide+"µL"
+vol_nuc = "A : " + volume_nucleotide+" µL"
 
 st.write(vol_nuc)
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), '      ')
+table_volume = np.full((8,12), '         ')
 for i in range(4):
     table_volume[i,0] = vol_nuc
     table_volume[i,1] = vol_nuc
