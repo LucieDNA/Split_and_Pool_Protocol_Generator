@@ -231,9 +231,9 @@ volume_W2 = 0.050 * number_of_cycle+0.1
 
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), 0.)
+table_volume = np.full((8,12), round(0.,3))
 for i in range(4):
-    table_volume[i,0] = volume_nucleotide
+    table_volume[i,0] = round(volume_nucleotide,3)
     table_volume[i,1] = volume_enzyme
     table_volume[i,2] = volume_W1
     table_volume[i,3] = volume_D
