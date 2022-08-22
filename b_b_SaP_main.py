@@ -245,9 +245,11 @@ for i in range(4):
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
 
 def color_reageants(cell):
+    if cell is '           ':
+        return 'background-color: #ffffff'
     if cell is not '           ':
-        return 'background-color: #c4b6d9'
-    return ''
+        return 
+    return 'background-color: #ffffff'
       
 df = pd.DataFrame(
     table_volume,
