@@ -229,9 +229,7 @@ volume_W1 = str(int((0.05 * number_of_cycle+0.1)*1000))
 volume_D =str(int((0.1 * number_of_cycle+0.1)*1000))
 volume_W2 = str(int((0.05 * number_of_cycle+0.1)*1000))
 
-vol_nuc = "A = " + volume_nucleotide+" µL"
 
-st.write(vol_nuc)
 color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '           ')
@@ -249,6 +247,7 @@ for i in range(4):
 def color_reageants(cell):
     if cell is not '           ':
         return 'background-color: #c4b6d9'
+    return ''
       
 df = pd.DataFrame(
     table_volume,
