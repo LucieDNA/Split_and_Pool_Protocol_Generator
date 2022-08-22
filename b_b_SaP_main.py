@@ -223,7 +223,7 @@ with generate_button:
 
 
 
-volume_nucleotide = str((0.025 * number_of_cycle+0.1)*1000)
+volume_nucleotide = str(int((0.025 * number_of_cycle+0.1)*1000))
 volume_enzyme = 0.025 * number_of_cycle+0.1
 volume_W1 = 0.050 * number_of_cycle+0.1
 volume_D = 0.100 * number_of_cycle+0.1
