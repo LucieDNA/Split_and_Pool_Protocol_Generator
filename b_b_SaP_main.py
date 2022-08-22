@@ -296,6 +296,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-table = st.dataframe(df.style.applymap(color_reageants), width=1000)    
+table = st.dataframe(df.style.applymap(color_reageants), width=1300)    
 
 
