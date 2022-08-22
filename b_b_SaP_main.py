@@ -231,7 +231,7 @@ volume_W2 = 0.050 * number_of_cycle+0.1
 
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), None)
+table_volume = np.full((8,12), '')
 for i in range(4):
     table_volume[i,0] = volume_nucleotide
     table_volume[i,1] = volume_enzyme
@@ -240,7 +240,7 @@ for i in range(4):
     table_volume[i,4] = volume_W2
 
 def color_reageants(cell):
-    if cell != 0:
+    if cell is not '':
         return 'background-color: red'
         
 df = pd.DataFrame(
