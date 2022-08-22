@@ -230,6 +230,20 @@ volume_D =str(int((0.1 * number_of_cycle+0.1)*1000))
 volume_W2 = str(int((0.05 * number_of_cycle+0.1)*1000))
 
 
+if number_of_cycle <= 5:
+    volume_Ps_split_1 = str(int(round(total_volume/1000 * number_of_cycle+0.1, 3)*1000))
+    volume_Ps_split_2 = 0
+    volume_Ps_split_3 = 0
+if 6 < number_of_cycle <= 12:
+    volume_Ps_split_1 = str(int(round(total_volume/1000 * 5+0.1, 3)*1000))
+    volume_Ps_split_2 = str(int(round(total_volume/1000 * (number_of_cycle-5)+0.1, 3)*1000))
+    volume_Ps_split_3 = 0
+if 12 < number_of_cycle <= 19:
+    volume_Ps_split_1 = str(int(round(total_volume/1000 * 5+0.1, 3)*1000))
+    volume_Ps_split_2 = str(int(round(total_volume/1000 * 7+0.1, 3)*1000))
+    volume_Ps_split_3 = str(int(round(total_volume/1000 * (number_of_cycle-6*2)+0.1, 3)*1000))
+
+
 color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '           ')
@@ -238,11 +252,14 @@ table_volume[1,0] = "C = " + volume_nucleotide+" µL"
 table_volume[2,0] = "G = " + volume_nucleotide+" µL"
 table_volume[3,0] = "T = " + volume_nucleotide+" µL"
 
+table_volume[0,11] = "W2 = " +volume_Ps_split_1+" µL"
+table_volume[1,11] = "W2 = " +volume_Ps_split_1+" µL"
 for i in range(4):
     table_volume[i,1] = "E = " + volume_enzyme+" µL"
     table_volume[i,2] = "W1 = " + volume_W1+" µL"
     table_volume[i,3] = "D = " + volume_D+" µL"
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
+    
 
 def color_reageants(cell):
     if cell == '           ':
