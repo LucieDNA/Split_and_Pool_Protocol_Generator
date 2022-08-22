@@ -235,10 +235,10 @@ color_enzyme = 'background-color: green'
 table_volume = np.full((8,12), '')
 for i in range(4):
     table_volume[i,0] = vol_nuc
-    table_volume[i,1] = volume_enzyme*1000
-    table_volume[i,2] = round(volume_W1,3)*1000
-    table_volume[i,3] = round(volume_D,3)*1000
-    table_volume[i,4] = round(volume_W2,3)*1000
+    table_volume[i,1] = vol_nuc
+    table_volume[i,2] = vol_nuc
+    table_volume[i,3] = vol_nuc
+    table_volume[i,4] = vol_nuc
 
 def color_reageants(cell):
     if cell is not '':
