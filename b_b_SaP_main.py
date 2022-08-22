@@ -248,8 +248,7 @@ def color_reageants(cell):
     if cell is '           ':
         return 'background-color: #ffffff'
     if cell is not '           ':
-        return 
-    return 'background-color: #ffffff'
+        return
       
 df = pd.DataFrame(
     table_volume,
