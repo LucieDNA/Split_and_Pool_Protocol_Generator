@@ -248,9 +248,21 @@ def color_reageants(cell):
     if cell == '           ':
         return 'background-color: #ffffff'
     if cell == "A = " + volume_nucleotide+" µL":
-        return 'background-color: #c4b6d9'
+        return 'background-color: #ebe7f2'
     if cell == "C = " + volume_nucleotide+" µL":
+        return 'background-color: #d7cee6'
+    if cell == "G = " + volume_nucleotide+" µL":
         return 'background-color: #c4b6d9'
+    if cell == "T = " + volume_nucleotide+" µL":
+        return 'background-color: #9c85c0'
+    if cell == "E = " + volume_enzyme+" µL":
+        return 'background-color: #e3beca'
+    if cell == "W1 = " + volume_W1+" µL":
+        return 'background-color: #f1d77f'
+    if cell == "D = " + volume_D+" µL":
+        return 'background-color: #c9d3be'
+    if cell == "W2 = " + volume_W2+" µL":
+        return 'background-color: #f8c891'
       
 df = pd.DataFrame(
     table_volume,
