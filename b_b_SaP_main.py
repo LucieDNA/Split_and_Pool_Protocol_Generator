@@ -240,13 +240,14 @@ for i in range(4):
     table_volume[i,4] = volume_W2
 
 def color_reageants(cell):
-    return 'background-color: green'
+    if cell != 0:
+        return 'background-color: green'
         
 df = pd.DataFrame(
     table_volume,
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-#table = st.table(df.style.applymap(color_reageants, subset="1"))    
+table = st.table(df.style.applymap(color_reageants, subset="1"))    
 
 
