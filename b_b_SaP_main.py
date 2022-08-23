@@ -219,7 +219,7 @@ with generate_button:
     #st.button('Open Excel file', on_click=update_excel)
     if gen_button:
         with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
-            st.download_button('Download protocol', data=file, file_name='a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py')
+            st.download_button('Download protocol', data=file, file_name=str(synthesis_date.strftime('%y%m%d'))+'_'+number_of_cycle+'_mers_barcodes.py')
 
 
 
