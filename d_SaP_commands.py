@@ -526,7 +526,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     delay_WL(protocolFile, seconds=8, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     # Transfer 1
-    transfer_whole_wells(protocolFile, work_well, 64, volume_SaP)
+    transfer_whole_wells(protocolFile, work_well, pool_well, volume_SaP)
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, seconds=8, minutes=0)
@@ -550,7 +550,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     delay_WL(protocolFile, seconds=5, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     # Transfer 2
-    transfer_whole_wells_mix(protocolFile, work_well, 72, volume_SaP)
+    transfer_whole_wells_mix(protocolFile, work_well, pool_well, volume_SaP)
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, seconds=8, minutes=0)
@@ -574,7 +574,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     delay_WL(protocolFile, seconds=5, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     # Transfer 3
-    transfer_whole_wells_mix(protocolFile, work_well, 80, volume_SaP)
+    transfer_whole_wells_mix(protocolFile, work_well, pool_well, volume_SaP)
 
 
     # Return tips
