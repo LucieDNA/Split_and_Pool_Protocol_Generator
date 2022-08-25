@@ -197,7 +197,6 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Third aspiration in split well
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     mix_SaP_WL(protocolFile, pipet300_single, 6, 220, FilterPlate, split_well, 8)
-    home_made_airgap(protocolFile, pipet300_single, FilterPlate, split_well, AIR_GAP_VOL)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10-20, precision_asp_depth,
                           precision_flow_rate)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20+10, 0.7,
@@ -247,7 +246,6 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Forth aspiration in split well
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     mix_SaP_WL(protocolFile, pipet300_single, 6, 220, FilterPlate, split_well, 8)
-    home_made_airgap(protocolFile, pipet300_single, FilterPlate, split_well, AIR_GAP_VOL)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10 - 20,
                           precision_asp_depth,
                           precision_flow_rate)
