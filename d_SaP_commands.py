@@ -480,7 +480,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well, AIR_GAP_VOL / 4, 0.4,
                               precision_flow_rate)
-        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 1, 75)
+        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 1, 75, 4)
         mix_SaP_WL(protocolFile, pipet300_single, 4, 110, FilterPlate, well + 1, 8)
         ## Aspirate well 2
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 1, volume / 4 - 10,
@@ -490,7 +490,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 1, AIR_GAP_VOL / 4, 0.4,
                               precision_flow_rate)
-        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 2, 130)
+        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 2, 130, 4)
         mix_SaP_WL(protocolFile, pipet300_single, 4, 165, FilterPlate, well + 2, 8)
         ## Aspirate well 3
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 2, 172.5,
@@ -500,7 +500,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 2, AIR_GAP_VOL / 4, 0.4,
                               precision_flow_rate)
-        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 3, 187.5)
+        dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 3, 187.5, 4)
         mix_SaP_WL(protocolFile, pipet300_single, 4, 220, FilterPlate, well + 3, 8)
         ## Aspirate well 4
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well + 3, 230,
