@@ -205,11 +205,6 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
         pool_well = 31
         full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, pipet300_multi, pipet300_single, labware_list)
 
-
-    pause_WL(protocolFile)
-    delay_WL(protocolFile, 5)
-
-
     # Full cycle 16
     current_cycle += 1
     if current_cycle <= number_of_cyle:
@@ -244,7 +239,6 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
     return_WL(protocolFile, pipet300_multi)
     return_WL(protocolFile, pipet300_single)
-
 
     pause_WL(protocolFile)
     delay_WL(protocolFile, 4)
