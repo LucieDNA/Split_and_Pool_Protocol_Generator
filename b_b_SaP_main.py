@@ -48,6 +48,7 @@ with col2:
     #st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
     #number_of_cycle = ceil(log(number_beads) / log(4))
     duration = convert(15.25 * number_of_cycle)
+    number_beads = 10^(number_of_cycle*log(4))
 
 
     st.markdown("Number of cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
