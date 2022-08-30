@@ -38,14 +38,15 @@ image_filter_grenier = Image.open("images/Grenier.PNG")
 col1, col2, col3, col4 = st.columns([1, 1.5, 0.5, 1.5], gap="medium")
 
 with col1:
-    conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
-    number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
+    number_of_cycle = st.select_slider('Barcode length', min_value = 1, max_value = 19, value = 13)
+    #conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
+    #number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
 
 with col2:
     st.markdown('   ')
     st.markdown('   ')
-    st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
-    number_of_cycle = ceil(log(number_beads) / log(4))
+    #st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
+    #number_of_cycle = ceil(log(number_beads) / log(4))
     duration = convert(15.25 * number_of_cycle)
 
 
