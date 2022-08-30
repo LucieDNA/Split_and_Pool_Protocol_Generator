@@ -219,57 +219,6 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     blow_out_WL(protocolFile, pipet300_single)
     home_made_airgap(protocolFile, pipet300_single, FilterPlate, work_well, AIR_GAP_VOL)
 
-    # Vacuum
-    startVac(protocolFile, MARC_COMPORT)
-    home_made_airgap(protocolFile, pipet300_multi, ReagentReservoir, res_split_3, AIR_GAP_VOL)
-    aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, res_split_3, volume_SaP - 20, ASP_FLOW_RATE)
-    home_made_airgap(protocolFile, pipet300_multi, ReagentReservoir, res_split_3, AIR_GAP_VOL)
-    delay_WL(protocolFile, 6, 0)
-    stopVac(protocolFile, MARC_COMPORT)
-
-    # Stir
-    startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=3, minutes=0)
-    stopStirring(protocolFile, MARC_COMPORT)
-
-    # Refill split well
-    dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, split_well, volume_SaP - 15 + 2 * AIR_GAP_VOL,
-                    DISP_FLOW_RATE)
-    blow_out_WL(protocolFile, pipet300_multi)
-    home_made_airgap(protocolFile, pipet300_multi, FilterPlate, split_well, AIR_GAP_VOL)
-
-    # Stir
-    startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=7, minutes=0)
-    stopStirring(protocolFile, MARC_COMPORT)
-
-    # Forth aspiration in split well
-    air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
-    mix_SaP_WL(protocolFile, pipet300_single, 6, 220, FilterPlate, split_well, 8)
-    aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10 - 20,
-                          precision_asp_depth,
-                          precision_flow_rate)
-    aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20 + 10, 0.7,
-                          precision_flow_rate)
-    aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 10, 0.4,
-                          precision_flow_rate)
-    # Dispense well 1
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 3, volume_SaP / 4 - 2.5 + AIR_GAP_VOL + 30,
-                    DISP_FLOW_RATE)
-    touch_tip_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 3)
-    # Dispense well 2
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 2, volume_SaP / 4 - 2.5, DISP_FLOW_RATE)
-    touch_tip_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 2)
-    # Dispense well 3
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 1, volume_SaP / 4 - 2.5, DISP_FLOW_RATE)
-    touch_tip_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well + 1)
-    # Dispense well 4
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well, volume_SaP / 4 - 2.5 + AIR_GAP_VOL,
-                    DISP_FLOW_RATE)
-    blow_out_WL(protocolFile, pipet300_single)
-    touch_tip_SaP_WL(protocolFile, pipet300_single, FilterPlate, work_well)
-    blow_out_WL(protocolFile, pipet300_single)
-    home_made_airgap(protocolFile, pipet300_single, FilterPlate, work_well, AIR_GAP_VOL)
 
 
     #Return pipets
