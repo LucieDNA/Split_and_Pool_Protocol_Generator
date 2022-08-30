@@ -44,7 +44,6 @@ with col1:
 
 with col2:
     st.markdown('   ')
-    st.markdown('   ')
     #st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
     #number_of_cycle = ceil(log(number_beads) / log(4))
     duration = convert(15.25 * number_of_cycle)
@@ -55,9 +54,6 @@ with col2:
     st.markdown("Estimated duration &emsp; **" + str(duration) + "**", unsafe_allow_html=True)
 
 with col3:
-    st.markdown('   ')
-    st.markdown('   ')
-    st.markdown('   ')
     synthesis_date = st.date_input('Date of the synthesis', datetime.datetime.now())
 
 with col4:
