@@ -59,31 +59,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
     # START HEATING
     startHeating(protocolFile, MARC_COMPORT)
-    pause_WL(protocolFile)
-    delay_WL(protocolFile, 2)
-    
-    vacuum(protocolFile, MARC_COMPORT, 25)
-    # Addition of an end sequence
-    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, 0, start_seq)
-
-    # Empty first well and pickup first tips
-    startVac(protocolFile, MARC_COMPORT)
-    pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, 0)
-    pickup_tips_multi_WL(protocolFile, pipet300_multi, tips_300, 55)
-    startVent(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, 6, 0)
-    stopVac(protocolFile, MARC_COMPORT)
-    air_gap_WL(protocolFile, pipet300_multi, 10)
-    aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 88, volume_SaP, 1.5)
-    air_gap_WL(protocolFile, pipet300_multi, 10)
-    stopVent(protocolFile, MARC_COMPORT)
-
-    # First fill of split well
-    dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, 0, volume_SaP + 2 * 10, 2)
-    blow_out_WL(protocolFile, pipet300_multi)
-    air_gap_WL(protocolFile, pipet300_multi, 10)
-
-
+ 
     # Full cycle 1
     current_cycle += 1
     if current_cycle <= number_of_cyle:
