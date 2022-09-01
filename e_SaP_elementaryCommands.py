@@ -69,7 +69,7 @@ def blow_out_WL(protocolFile, pipet, location=""):
 def touch_tip_WL(protocolFile, pipet, location, radius=1, offset=-1):
     protocolFile.write("    " + pipet + ".touch_tip(" + location + ", radius=" + str(radius) + ", v_offset=" + str(offset) + ")\n")
 
-def touch_tip_SaP_WL(protocolFile, pipet, labware, well, radius=1, offset=-5):
+def touch_tip_SaP_WL(protocolFile, pipet, labware, well, radius=1, offset=-3):
     protocolFile.write("    " + pipet + ".touch_tip(" + labware + ".wells()[" + str(well) + "], radius=" + str(radius) + ", v_offset=" + str(offset) + ")\n")
 
 
@@ -99,6 +99,9 @@ def sendSerial(protocolFile, COMPORT, intToTransfer):
     protocolFile.write("\n")
 
 
+def startStirring_variable(protocolFile, COMPORT, speed):
+    comment_WL(protocolFile, "Start Stirring")
+    sendSerial(protocolFile, COMPORT, speed)
 
 def startStirring(protocolFile, COMPORT):
     comment_WL(protocolFile, "Start Stirring")
