@@ -48,8 +48,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
 
     # DEFINE NUMBER OF CYCLE
-    number_beads = general_parameters[0]
-    number_of_cyle = ceil(log(number_beads)/log(4))
+    number_of_cyle = general_parameters[0]
     current_cycle = 0
 
     # DEFINE VOLUME FOR THE SPLIT AND POOL
