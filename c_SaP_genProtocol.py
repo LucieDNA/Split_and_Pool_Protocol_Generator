@@ -5,11 +5,10 @@ from f_a_SaP_PSP import *
 from f_b_SaP_double_PSP import *
 import datetime
 from g_SaP_add_end import *
-#from h_SaP_add_end_v2 import *
 
 
 
-def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, end_seq):
+def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq, single_psp, double_psp, well_psp):
 
     MARC_COMPORT = None
     MARC_COMPORT = "/dev/ttyACM0"
@@ -17,7 +16,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
     date = datetime.datetime.now().strftime('%y%m%d')
 
-    PROTOCOL_PATH = 'a_SaP_protocol_'+str(date)+'.py'
+    PROTOCOL_PATH = 'a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py'
 
     protocolFile = open(PROTOCOL_PATH, "w")
 
@@ -62,6 +61,27 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     startHeating(protocolFile, MARC_COMPORT)
     pause_WL(protocolFile)
     delay_WL(protocolFile, 2)
+    
+    vacuum(protocolFile, MARC_COMPORT, 25)
+    # Addition of an end sequence
+    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, 0, start_seq)
+
+    # Empty first well and pickup first tips
+    startVac(protocolFile, MARC_COMPORT)
+    pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, 0)
+    pickup_tips_multi_WL(protocolFile, pipet300_multi, tips_300, 55)
+    startVent(protocolFile, MARC_COMPORT)
+    delay_WL(protocolFile, 6, 0)
+    stopVac(protocolFile, MARC_COMPORT)
+    air_gap_WL(protocolFile, pipet300_multi, 10)
+    aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 88, volume_SaP, 1.5)
+    air_gap_WL(protocolFile, pipet300_multi, 10)
+    stopVent(protocolFile, MARC_COMPORT)
+
+    # First fill of split well
+    dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, 0, volume_SaP + 2 * 10, 2)
+    blow_out_WL(protocolFile, pipet300_multi)
+    air_gap_WL(protocolFile, pipet300_multi, 10)
 
 
     # Full cycle 1
@@ -184,11 +204,6 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
         pool_well = 31
         full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, pipet300_multi, pipet300_single, labware_list)
 
-
-    pause_WL(protocolFile)
-    delay_WL(protocolFile, 5)
-
-
     # Full cycle 16
     current_cycle += 1
     if current_cycle <= number_of_cyle:
@@ -224,24 +239,19 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     return_WL(protocolFile, pipet300_multi)
     return_WL(protocolFile, pipet300_single)
 
-
     pause_WL(protocolFile)
     delay_WL(protocolFile, 4)
 
     vacuum(protocolFile, MARC_COMPORT, 25)
 
-
-
     # Addition of an end sequence
-    #add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
-
-    # Addition of a long end sequence
-    last_transfer(current_cycle, protocolFile, pool_well, pipet300_multi, pipet300_single, labware_list)
-    add_end_seq_v2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
-
-    #psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
-    double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well)
-
+    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
+    
+    if double_psp:
+        double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
+    if single_psp:
+        psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)    
+        
     # STOP HEATING
     stopHeating(protocolFile, MARC_COMPORT)
 
@@ -252,5 +262,4 @@ if __name__ == "__main__":
     #well_edges = [(0.79, 0, -1), (-0.76, 0, -1), (0, -0.60, -1), (0, 1.1, -1)]
     losses = '2%'
     precision_pipetting_param = [0, 1]
-    end_seq = 'ATCGA'
-    genProtocol([10000, 200], labware_list_and_loc, pipetting_condition, precision_pipetting_param, end_seq)
+    genProtocol([10000, 200], labware_list_and_loc, pipetting_condition, precision_pipetting_param)
