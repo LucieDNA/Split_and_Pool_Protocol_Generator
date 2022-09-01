@@ -183,7 +183,7 @@ with st.sidebar:
         submitted = st.form_submit_button("Submit")
         
 with generate_button:
-    gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_beads, 270],
+    gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_of_cycle, 270],
                                                                [[tiprack, tiprack_loc], [reservoir, reservoir_loc],
                                                                 [filterPlate, filterPlate_loc], singleChannel,
                                                                 multiChannel],
