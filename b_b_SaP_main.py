@@ -66,7 +66,7 @@ with col2:
 duration = convert(19.4 * number_of_cycle+10*(len(start_seq)+len(end_seq)))
 
 with infos:
-    st.markdown("Number of cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
+    st.markdown("Number of Split&Pool cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
     st.markdown("Estimated duration &emsp; **" + str(duration) + "**", unsafe_allow_html=True)
     
 
