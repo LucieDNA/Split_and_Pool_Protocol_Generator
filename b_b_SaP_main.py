@@ -192,7 +192,7 @@ with generate_button:
                                                                 [filterPlate, filterPlate_loc], singleChannel,
                                                                 multiChannel],
                                                                [asp_depth, asp_flow_rate, disp_flow_rate],
-                                                               [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq, simple_psp, double_psp, well_psp])
+                                                               [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq, simple_psp, double_psp, well_psp, True])
     if gen_button:
         st.success('Protocol successfully generated, click on **Download protocol**')
 
