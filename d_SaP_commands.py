@@ -126,7 +126,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         delay_WL(protocolFile, 3, 0)
         stopVac(protocolFile, MARC_COMPORT)
         air_gap_WL(protocolFile, pipet300_multi, 10)
-        aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 88, volume_SaP - 20, 1.5)
+        aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 56, volume_SaP - 20, 1.5)
         air_gap_WL(protocolFile, pipet300_multi, 10)
         stopVent(protocolFile, MARC_COMPORT)
 
