@@ -3,12 +3,12 @@ from e_SaP_elementaryCommands import *
 
 end_seq = 'ATCGAATCGA'
 
-def add_end_seq(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, end_seq):
+def add_end_seq_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, end_seq):
     if end_seq is not '':
         for base in end_seq:
-            add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base)
+            add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base)
 
-def add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base):
+def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base):
 
     #Pipets and labware
 
