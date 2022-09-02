@@ -65,6 +65,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     # Addition of an start sequence
     if start_seq != '':
         vacuum(protocolFile, MARC_COMPORT, 25)
+        poom_well = 0
         add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
  
     # Full cycle 1
