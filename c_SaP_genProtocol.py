@@ -73,7 +73,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
             add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
  
     if control_synth:
-        pause(protocolFile)
+        pause_WL(protocolFile)
     
     # Full cycle 1
     current_cycle += 1
