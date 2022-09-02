@@ -100,17 +100,17 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     comment_WL(protocolFile, "Split")
     split_tip = current_cycle - 1
 
-    if current_cycle <= 5:
+    if current_cycle <= 6:
         res_split_1 = 88
         res_split_2 = 89
         res_split_3 = 90
 
-    if 6 <= current_cycle <= 11:
+    if 7 <= current_cycle <= 12:
         res_split_1 = 91
         res_split_2 = 92
         res_split_3 = 93
 
-    if 12 <= current_cycle <= 19:
+    if 13 <= current_cycle <= 19:
         res_split_1 = 94
         res_split_2 = 95
         res_split_3 = 87
