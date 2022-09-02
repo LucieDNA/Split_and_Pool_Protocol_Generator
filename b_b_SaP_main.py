@@ -46,12 +46,9 @@ with col2:
     st.markdown('   ')
     #st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
     #number_of_cycle = ceil(log(number_beads) / log(4))
-    duration = convert(15.25 * number_of_cycle)
-    number_beads = 10**(number_of_cycle*log(4))
-
-
-    st.markdown("Number of cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
-    st.markdown("Estimated duration &emsp; **" + str(duration) + "**", unsafe_allow_html=True)
+    infos = st.container()
+    
+    #number_beads = 10**(number_of_cycle*log(4))
 
 with col3:
     synthesis_date = st.date_input('Date of the synthesis', datetime.datetime.now())
@@ -65,6 +62,13 @@ with col1:
     start_seq = st.text_input('Addition of sequence at the beginning of the barcodes', '')
 with col2:
     end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'ATCGAATCGA')
+    
+duration = convert(19.24 * number_of_cycle+10*(length(start_seq)+length(end_seq)))
+
+with infos:
+    st.markdown("Number of cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
+    st.markdown("Estimated duration &emsp; **" + str(duration) + "**", unsafe_allow_html=True)
+    
 
 TiprackList = [
                 "opentrons_96_tiprack_300ul",
