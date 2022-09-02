@@ -38,7 +38,7 @@ image_filter_grenier = Image.open("images/Grenier.PNG")
 col1, col2, col3, col4 = st.columns([2, 1.4, 1.1, 1.5], gap="medium")
 
 with col1:
-    number_of_cycle = st.slider('Barcode length', min_value = 1, max_value = 19, value = 13)
+    number_of_cycle = st.slider('Barcode length', min_value = 1, max_value = 19, value = 18)
     #conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
     #number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
 
