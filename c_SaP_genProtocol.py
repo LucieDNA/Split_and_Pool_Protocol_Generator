@@ -5,6 +5,7 @@ from f_a_SaP_PSP import *
 from f_b_SaP_double_PSP import *
 import datetime
 from g_SaP_add_end import *
+from g_b_SaP_end_seq_double import *
 
 
 
@@ -66,7 +67,10 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     if start_seq != '':
         vacuum(protocolFile, MARC_COMPORT, 25)
         pool_well = 0
-        add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
+        if control_synth:
+            add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
+        else:
+            add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
  
     # Full cycle 1
     current_cycle += 1
@@ -229,7 +233,10 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     vacuum(protocolFile, MARC_COMPORT, 25)
     
     # Addition of an end sequence
-    add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
+    if control_synth:
+        add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
+    else:
+        add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
     
     if double_psp:
         double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
