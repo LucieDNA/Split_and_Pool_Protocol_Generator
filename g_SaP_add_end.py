@@ -47,7 +47,7 @@ def add_single_nuc(protocolFile, multi_pipet, single_pipet, labware_list, MARC_C
         base_well = 4
         base_tip = 47
     if base == 'X':
-        base_well = 3
+        base_well = 5
         base_tip = 46
 
 
