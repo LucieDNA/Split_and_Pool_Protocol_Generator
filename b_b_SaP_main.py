@@ -54,7 +54,7 @@ with col3:
     synthesis_date = st.date_input('Date of the synthesis', datetime.datetime.now())
 
 with col4:
-    st.write("Download Excel file [here](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler.xlsm)")
+    st.write("Download Excel file [here](https://github.com/LucieDNA/Split_and_Pool_Protocol_Generator/raw/main/Split_And_Pool_Controler_corrected.xlsm)")
     generate_button = st.container()
 
 col1, col2 = st.columns([1.5, 1.5])
