@@ -225,7 +225,7 @@ with generate_button:
         with open('a_SaP_protocol_'+str(synthesis_date.strftime('%y%m%d'))+'.py') as file:
             st.download_button('Download protocol', data=file, file_name=str(synthesis_date.strftime('%y%m%d'))+'_'+str(number_of_cycle)+'_mers_barcodes.py')
 
-
+'''
 
 volume_nucleotide = str(int((0.025 * number_of_cycle+0.1)*1000))
 volume_enzyme = str(int((0.025 * number_of_cycle+0.1)*1000))
@@ -300,6 +300,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-table = st.dataframe(df.style.applymap(color_reageants), width=1500)    
+table = st.dataframe(df.style.applymap(color_reageants), width=1500)    '''
 
 
