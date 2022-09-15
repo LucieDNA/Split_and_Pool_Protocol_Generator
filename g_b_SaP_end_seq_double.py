@@ -140,7 +140,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
     if (n % 2) == 0:
         aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 29, 100, ASP_FLOW_RATE)
     else:
-        aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 31, 100, ASP_FLOW_RATE)
+        aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 38, 100, ASP_FLOW_RATE)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     delay_WL(protocolFile, seconds=25, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
