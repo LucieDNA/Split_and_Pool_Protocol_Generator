@@ -5,10 +5,10 @@ end_seq = 'ATCGAATCGA'
 
 def add_end_seq_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, end_seq):
     if end_seq is not '':
-        for base in end_seq:
-            add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base)
+        for i in range(len(end_seq)):
+            add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, end_seq[i], i)
 
-def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base):
+def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMPORT, pool_well, base, n):
 
     #Pipets and labware
 
@@ -73,7 +73,10 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
     ## Enzyme
     pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, 68)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
-    aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 12, 50, 1.5)
+    if (n % 2) == 0:
+        aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 12, 50, 1.5)
+    else:
+        aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 13, 50, 1.5)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
