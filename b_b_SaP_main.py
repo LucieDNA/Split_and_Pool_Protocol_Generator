@@ -63,7 +63,7 @@ with col1:
 with col2:
     end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'TCGTCGGCAGCGUCAGAUGUGUAUAAGAGACAG')
     
-duration = convert(19.4 * number_of_cycle+10*(len(start_seq)+len(end_seq)))
+duration = convert(20 * number_of_cycle+10*(len(start_seq)+len(end_seq)))
 
 with infos:
     st.markdown("Number of Split&Pool cycles &emsp; **" + str(number_of_cycle) + "**", unsafe_allow_html=True)
