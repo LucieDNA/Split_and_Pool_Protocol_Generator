@@ -140,7 +140,8 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, split_well, second_volume + 20, 2)
         blow_out_WL(protocolFile, pipet300_multi)
         air_gap_WL(protocolFile, pipet300_multi, 10)
-
+    
+    precision_flow_rate_2 = '2'
 
     # First split
     # Stir
@@ -157,7 +158,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     mix_SaP_WL(protocolFile, pipet300_single, 2, 200, FilterPlate, split_well, 8)
     mix_SaP_WL(protocolFile, pipet300_single, 2, 220, FilterPlate, split_well, 8)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 40, bottom_1,
-                          precision_flow_rate)
+                          precision_flow_rate_2)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20, bottom_2,
                           precision_flow_rate)
     home_made_airgap(protocolFile, pipet300_single, FilterPlate, split_well, AIR_GAP_VOL)
@@ -209,7 +210,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     mix_SaP_WL(protocolFile, pipet300_single, 2, 220, FilterPlate, split_well, 10)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10 - 20,
                           bottom_1,
-                          precision_flow_rate)
+                          precision_flow_rate_2)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20 + 10, bottom_2,
                           precision_flow_rate)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 10 + 5, bottom_3,
@@ -260,7 +261,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     mix_SaP_WL(protocolFile, pipet300_single, 2, 220, FilterPlate, split_well, 10)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10 - 20,
                           bottom_1,
-                          precision_flow_rate)
+                          precision_flow_rate_2)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20 + 10, bottom_2,
                           precision_flow_rate)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 10 + 5, bottom_3,
@@ -311,7 +312,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     mix_SaP_WL(protocolFile, pipet300_single, 2, 220, FilterPlate, split_well, 10)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, volume_SaP - 10 - 20,
                           bottom_1,
-                          precision_flow_rate)
+                          precision_flow_rate_2)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 20 + 10, bottom_2,
                           precision_flow_rate)
     aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, split_well, 10 + 5, bottom_3,
@@ -536,7 +537,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         mix_SaP_WL(protocolFile, pipet300_single, 3, 50, FilterPlate, well_1, 8)
         ## Aspirate well 1
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_1, 57.5, bottom_1,
-                              precision_flow_rate)
+                              precision_flow_rate_2)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_1, 15, bottom_2,
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_1, 20, bottom_3,
@@ -546,7 +547,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         ## Aspirate well 2
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_2, 115,
                               bottom_1,
-                              precision_flow_rate)
+                              precision_flow_rate_2)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_2, 15, bottom_2,
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_2, 20, bottom_3,
@@ -556,7 +557,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         ## Aspirate well 3
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_3, 172.5,
                               bottom_1,
-                              precision_flow_rate)
+                              precision_flow_rate_2)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_3, 15, bottom_2,
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_3, 20, bottom_3,
@@ -566,7 +567,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
         ## Aspirate well 4
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_4, 230,
                               bottom_1,
-                              precision_flow_rate)
+                              precision_flow_rate_2)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_4, 15, bottom_2,
                               precision_flow_rate)
         aspirate_split_SaP_WL(protocolFile, pipet300_single, FilterPlate, well_4, 20, bottom_3,
