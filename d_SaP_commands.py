@@ -7,7 +7,7 @@ second_volume = 180
 volume_SaP = first_volume + second_volume
 bottom_1 = 0.8
 bottom_2 = 0.4
-bottom_3 = 0.3
+bottom_3 = 0.2
 
 def header_SaP_wl(protocol_file, tiprack, reagentReservoir, filterPlate, desaltingPlate, mount_single_channel, mount_multi_channel):  # ot2=1 means P20 on OT2
     protocol_file.write("from opentrons import protocol_api, types\n"
@@ -145,11 +145,6 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
 
     # First split
     # Stir
-    startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=5, minutes=0)
-    stopStirring(protocolFile, MARC_COMPORT)
-    # First split
-    # Stir
     startStirring_variable(protocolFile, MARC_COMPORT, speed_slow)
     delay_WL(protocolFile, seconds=5, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
@@ -194,6 +189,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     startStirring_variable(protocolFile, MARC_COMPORT, speed_fast)
     delay_WL(protocolFile, seconds=8, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
+    delay_WL(protocolFile, seconds=2, minutes=0)
 
     dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, split_well, second_volume + 20, 2)
     blow_out_WL(protocolFile, pipet300_multi)
@@ -245,6 +241,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     startStirring_variable(protocolFile, MARC_COMPORT, speed_fast)
     delay_WL(protocolFile, seconds=8, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
+    delay_WL(protocolFile, seconds=2, minutes=0)
 
     dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, split_well, second_volume + 20, 2)
     blow_out_WL(protocolFile, pipet300_multi)
@@ -296,6 +293,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     startStirring_variable(protocolFile, MARC_COMPORT, speed_fast)
     delay_WL(protocolFile, seconds=8, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
+    delay_WL(protocolFile, seconds=2, minutes=0)
 
     dispense_SaP_WL(protocolFile, pipet300_multi, FilterPlate, split_well, second_volume + 20, 2)
     blow_out_WL(protocolFile, pipet300_multi)
