@@ -5,8 +5,8 @@ speed_slow = 900
 first_volume = 80
 second_volume = 180
 volume_SaP = first_volume + second_volume
-bottom_1 = 0.8
-bottom_2 = 0.4
+bottom_1 = 1
+bottom_2 = 0.5
 bottom_3 = 0.2
 
 def header_SaP_wl(protocol_file, tiprack, reagentReservoir, filterPlate, desaltingPlate, mount_single_channel, mount_multi_channel):  # ot2=1 means P20 on OT2
