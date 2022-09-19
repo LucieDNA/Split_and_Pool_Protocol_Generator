@@ -230,9 +230,6 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     return_WL(protocolFile, pipet300_multi)
     return_WL(protocolFile, pipet300_single)
 
-    pause_WL(protocolFile)
-    delay_WL(protocolFile, 4)
-
     vacuum(protocolFile, MARC_COMPORT, 25)
     
     # Addition of an end sequence
