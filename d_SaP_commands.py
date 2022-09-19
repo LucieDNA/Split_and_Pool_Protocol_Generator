@@ -594,7 +594,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=50, minutes=0)
+    delay_WL(protocolFile, seconds=15, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     startVent(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, 6, 0)
@@ -618,7 +618,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=60, minutes=0)
+    delay_WL(protocolFile, seconds=15, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     startVent(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, 6, 0)
