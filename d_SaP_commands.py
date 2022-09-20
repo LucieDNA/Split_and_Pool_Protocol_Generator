@@ -8,6 +8,7 @@ volume_SaP = first_volume + second_volume
 bottom_1 = 1
 bottom_2 = 0.5
 bottom_3 = 0.2
+vacuum_between_trans = 60
 
 def header_SaP_wl(protocol_file, tiprack, reagentReservoir, filterPlate, desaltingPlate, mount_single_channel, mount_multi_channel):  # ot2=1 means P20 on OT2
     protocol_file.write("from opentrons import protocol_api, types\n"
@@ -594,7 +595,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=15, minutes=0)
+    delay_WL(protocolFile, seconds=vacuum_between_trans, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     startVent(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, 6, 0)
@@ -618,7 +619,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     # Vacuum
     startVac(protocolFile, MARC_COMPORT)
     startStirring(protocolFile, MARC_COMPORT)
-    delay_WL(protocolFile, seconds=15, minutes=0)
+    delay_WL(protocolFile, seconds=vacuum_between_trans, minutes=0)
     stopStirring(protocolFile, MARC_COMPORT)
     startVent(protocolFile, MARC_COMPORT)
     delay_WL(protocolFile, 6, 0)
