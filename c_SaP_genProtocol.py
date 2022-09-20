@@ -237,6 +237,25 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
         add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
     else:
         add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
+        
+     # Vacuum
+    startVac(protocolFile, MARC_COMPORT)
+    pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, 92)
+    delay_WL(protocolFile, seconds=15, minutes=0)
+    startVent(protocolFile, MARC_COMPORT)
+    delay_WL(protocolFile, 6, 0)
+    stopVac(protocolFile, MARC_COMPORT)
+    air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
+    aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 36, 100, ASP_FLOW_RATE)
+    air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
+    stopVent(protocolFile, MARC_COMPORT)
+
+    ## Wash 2
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 100 + 2 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    blow_out_WL(protocolFile, pipet300_single)
+    air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
+
+    return_WL(protocolFile, pipet300_single)
     
     if double_psp:
         double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
