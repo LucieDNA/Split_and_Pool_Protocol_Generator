@@ -7,6 +7,7 @@ import datetime
 from g_SaP_add_end import *
 from g_b_SaP_end_seq_double import *
 
+AIR_GAP_VOL = 10
 
 
 def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq, single_psp, double_psp, well_psp, control_synth):
