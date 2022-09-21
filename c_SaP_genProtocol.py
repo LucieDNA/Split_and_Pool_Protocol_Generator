@@ -66,12 +66,11 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     # START HEATING
     startHeating(protocolFile, MARC_COMPORT)
     
-    
+    pool_well = 0
 
     # Addition of an start sequence
     if start_seq != '':
         vacuum(protocolFile, MARC_COMPORT, 25)
-        pool_well = 0
         if control_synth:
             add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
         else:
