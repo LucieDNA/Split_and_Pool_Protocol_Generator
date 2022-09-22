@@ -25,6 +25,8 @@ def convert(min):
     hour, min = divmod(min, 60)
     return "%dh%02d" % (hour, min)
 
+image_SaP = Image.open('images/SaP_theory.png')
+
 image_deck = Image.open('images/DeckMapEmpty.png')
 image_pip_single = Image.open("images/Pipettes_single.PNG")
 image_pip_multi = Image.open("images/Pipettes_multi.jpg")
@@ -226,5 +228,5 @@ with generate_button:
             st.download_button('Download protocol', data=file, file_name=str(synthesis_date.strftime('%y%m%d'))+'_'+str(number_of_cycle)+'_mers_barcodes.py')
 
    
-
+st.image(image_SaP)
 
