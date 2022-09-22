@@ -13,7 +13,7 @@ import numpy as np
 st.markdown("<h1 style='text-align: left; color: #ff5843;'>Split and Pool protocol generator</h1>", unsafe_allow_html=True)
 #st.title('Split and Pool protocol generator')
 #st.markdown('Choose operating parameters')
-st.subheader('Automomated DNA barcode synthesis on Opentrons')
+st.subheader('Automated DNA barcode synthesis on Opentrons')
 col1, col2 = st.columns(2)
 with col1:
     st.markdown(' 1 - Choose your operating parameters and date for the synthesis <br> 2 - Click on <b>Generate protocol</b> first than on <b>Download protocol</b>', unsafe_allow_html=True)
