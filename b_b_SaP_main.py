@@ -37,7 +37,7 @@ image_reservoir = Image.open("images/USA_reservoir.PNG")
 image_filter_pall = Image.open("images/Pall_on_mani.PNG")
 image_filter_grenier = Image.open("images/Grenier.PNG")
 
-col1, col1_5, col2, col3, col4 = st.columns([2, 1.4, 1.1, 1.5], gap="medium")
+col1, col1_5, col2, col3, col4 = st.columns([1.5, 1, 1.4, 1.1, 1.5], gap="medium")
 
 with col1:
     number_of_cycle = st.slider('Barcode length', min_value = 0, max_value = 19, value = 18)
