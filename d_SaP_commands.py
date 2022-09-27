@@ -8,7 +8,7 @@ volume_SaP = first_volume + second_volume
 bottom_1 = 1.3
 bottom_2 = 0.7
 bottom_3 = 0.3
-vacuum_between_trans = 60
+vacuum_between_trans = 15
 
 def header_SaP_wl(protocol_file, tiprack, reagentReservoir, filterPlate, desaltingPlate, mount_single_channel, mount_multi_channel):  # ot2=1 means P20 on OT2
     protocol_file.write("from opentrons import protocol_api, types\n"
