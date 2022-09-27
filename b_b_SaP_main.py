@@ -316,3 +316,16 @@ df = pd.DataFrame(
 tableau_1, tableau_2 = st.tabs(['Reagents plate', 'Tip rack'])
 with tableau_1:
     table = st.dataframe(df.style.applymap(color_reageants), width=1500)
+
+    
+table_tip = np.full((8,12), '                  ')
+for i in range number_of_cycle:
+    j = i//8 + i%8
+    table_tip[j,0] = "Cycle " + i
+
+df = pd.DataFrame(
+    table_tip,
+    index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+    columns=(str(i) for i in range(1,13)))
+
+table_2 = st.dataframe(df, width=1500)
