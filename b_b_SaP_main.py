@@ -249,12 +249,12 @@ volume_W2 = str(int((0.05 * number_of_cycle+0.1)*1000))
 
 if number_of_cycle <= 5:
     volume_Ps_split_1 = str(int(270* number_of_cycle+0.1))
-    volume_Ps_split_2 = 0
-    volume_Ps_split_3 = 0
+    volume_Ps_split_2 = str(0)
+    volume_Ps_split_3 = str(0)
 if 6 < number_of_cycle <= 12:
     volume_Ps_split_1 = str(int(270 * 5+0.1))
     volume_Ps_split_2 = str(int(270 * (number_of_cycle-5)+0.1))
-    volume_Ps_split_3 = 0
+    volume_Ps_split_3 = str(0)
 if 12 < number_of_cycle <= 19:
     volume_Ps_split_1 = str(int(270*5+0.1))
     volume_Ps_split_2 = str(int(270* 7+0.1))
