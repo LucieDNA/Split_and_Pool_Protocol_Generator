@@ -37,13 +37,16 @@ image_reservoir = Image.open("images/USA_reservoir.PNG")
 image_filter_pall = Image.open("images/Pall_on_mani.PNG")
 image_filter_grenier = Image.open("images/Grenier.PNG")
 
-col1, col2, col3, col4 = st.columns([2, 1.4, 1.1, 1.5], gap="medium")
+col1, col1_5, col2, col3, col4 = st.columns([2, 1.4, 1.1, 1.5], gap="medium")
 
 with col1:
     number_of_cycle = st.slider('Barcode length', min_value = 0, max_value = 19, value = 18)
     #conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
     #number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
 
+with col1_5:
+    support = st.radio('Solid Support', 'Resin', 'Magnetic beads', index=0)
+    
 with col2:
     st.markdown('   ')
     #st.markdown("Initial volume of resin to introduce in well 0 &emsp; **" + str(number_beads/int(conc_beads)) + "** &emsp; mL", unsafe_allow_html=True)
@@ -189,14 +192,18 @@ with st.sidebar:
         asp_depth_precision = st.text_input('Aspirate height above the bottom of the well', '0.9', help='in mm', key='1')
         flow_rate = st.text_input('Aspirate flow rate', '0.8', help='relative', key='2')
         submitted = st.form_submit_button("Submit")
-        
+
+if support == 'Magnetic beads':
+    vacuum_between_trans = 60
+else :
+    vacuum_between_trans = 15
 with generate_button:
     gen_button = st.button('Generate protocol', on_click=genProtocol, args=[[number_of_cycle, 270],
                                                                [[tiprack, tiprack_loc], [reservoir, reservoir_loc],
                                                                 [filterPlate, filterPlate_loc], singleChannel,
                                                                 multiChannel],
                                                                [asp_depth, asp_flow_rate, disp_flow_rate],
-                                                               [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq, simple_psp, double_psp, well_psp, control_synth])
+                                                               [asp_depth_precision, flow_rate], synthesis_date, start_seq, end_seq, simple_psp, double_psp, well_psp, control_synth, vacuum_between_trans])
     if gen_button:
         st.success('Protocol successfully generated, click on **Download protocol**')
 
