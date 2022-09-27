@@ -320,8 +320,7 @@ with tableau_1:
     
 table_tip = np.full((8,12), '                  ')
 for i in range(number_of_cycle+1):
-    j = i//8 + i%8
-    table_tip[j,0] = "Cycle " + i
+    table_tip[i%8, i//8] = "Cycle " + i
 
 df = pd.DataFrame(
     table_tip,
