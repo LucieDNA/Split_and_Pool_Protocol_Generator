@@ -233,11 +233,10 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
 
     return_WL(protocolFile, pipet300_multi)
     return_WL(protocolFile, pipet300_single)
-
-    vacuum(protocolFile, MARC_COMPORT, 25)
     
     # Addition of an end sequence
     if end_seq != '':
+        vacuum(protocolFile, MARC_COMPORT, 25)
         if control_synth:
             add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, end_seq)
         else:
@@ -263,8 +262,10 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
         
     
     if double_psp:
+        vacuum(protocolFile, MARC_COMPORT, 25)
         double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
     if single_psp:
+        vacuum(protocolFile, MARC_COMPORT, 25)
         pool_well = 70
         psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)    
         
