@@ -65,7 +65,7 @@ def full_cycle(current_cycle, protocolFile, split_well, work_well, pool_well, mu
     precision_asp_depth = labware_list[4][0]
     precision_flow_rate = labware_list[4][1]
     precision_flow_rate_2 = '2'
-    vacuum_between_trans = labware_list[4][7]
+    vacuum_between_trans = labware_list[7]
 
     # Define functions dispense and aspirate
 
