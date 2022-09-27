@@ -14,7 +14,7 @@ ASPIRATION_DEPTH = 1
 ASP_FLOW_RATE = 1.5
 DISP_FLOW_RATE = 2
 
-def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq, single_psp, double_psp, well_psp, control_synth):
+def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, precision_pipetting_param, synthesis_date, start_seq, end_seq, single_psp, double_psp, well_psp, control_synth, vacuum_between_trans):
 
     MARC_COMPORT = None
     MARC_COMPORT = "/dev/ttyACM0"
@@ -60,7 +60,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
     volume_SaP = general_parameters[1]
 
     # Define labware list
-    labware_list = [FilterPlate, ReagentReservoir, tips_300, pipetting_condition, precision_pipetting_param, volume_SaP, DesaltingPlate]
+    labware_list = [FilterPlate, ReagentReservoir, tips_300, pipetting_condition, precision_pipetting_param, volume_SaP, DesaltingPlate, vacuum_between_trans]
 
 
     # START HEATING
