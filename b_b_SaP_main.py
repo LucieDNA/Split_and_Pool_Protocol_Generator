@@ -238,5 +238,79 @@ with generate_button:
             st.download_button('Download protocol', data=file, file_name=str(synthesis_date.strftime('%y%m%d'))+'_'+str(number_of_cycle)+'_mers_barcodes.py')
 
    
-st.image(image_SaP)
+#st.image(image_SaP)
 
+ volume_nucleotide = str(int((0.025 * number_of_cycle+0.1)*1000))
+    volume_enzyme = str(int((0.025 * number_of_cycle+0.1)*1000))
+    volume_W1 = str(int((0.05 * number_of_cycle+0.1)*1000))
+    volume_D =str(int((0.1 * number_of_cycle+0.1)*1000))
+    volume_W2 = str(int((0.05 * number_of_cycle+0.1)*1000))
+
+
+    if number_of_cycle <= 5:
+        volume_Ps_split_1 = str(int(270* number_of_cycle+0.1))
+        volume_Ps_split_2 = 0
+        volume_Ps_split_3 = 0
+    if 6 < number_of_cycle <= 12:
+        volume_Ps_split_1 = str(int(270 * 5+0.1))
+        volume_Ps_split_2 = str(int(270 * (number_of_cycle-5)+0.1))
+        volume_Ps_split_3 = 0
+    if 12 < number_of_cycle <= 19:
+        volume_Ps_split_1 = str(int(270*5+0.1))
+        volume_Ps_split_2 = str(int(270* 7+0.1))
+        volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+0.1))
+
+    volume_Ps_pool = str(int(270/4 * number_of_cycle+0.1))
+    pooling_solution = 'W2'
+
+    color_enzyme = 'background-color: green'
+
+    table_volume = np.full((8,12), '                  ')
+    table_volume[0,0] = "A = " + volume_nucleotide+" µL"
+    table_volume[1,0] = "C = " + volume_nucleotide+" µL"
+    table_volume[2,0] = "G = " + volume_nucleotide+" µL"
+    table_volume[3,0] = "T = " + volume_nucleotide+" µL"
+
+    table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
+    table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
+    table_volume[2,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
+    table_volume[3,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
+    table_volume[4,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+    table_volume[5,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+    for i in range(4):
+        table_volume[i,1] = "E = " + volume_enzyme+" µL"
+        table_volume[i,2] = "W1 = " + volume_W1+" µL"
+        table_volume[i,3] = "D = " + volume_D+" µL"
+        table_volume[i,4] = "W2 = " + volume_W2+" µL"
+        table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
+        table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
+        table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
+
+    def color_reageants(cell):
+        if cell == '                  ':
+            return 'background-color: #ffffff'
+        if cell == "A = " + volume_nucleotide+" µL":
+            return 'background-color: #ebe7f2'
+        if cell == "C = " + volume_nucleotide+" µL":
+            return 'background-color: #d7cee6'
+        if cell == "G = " + volume_nucleotide+" µL":
+            return 'background-color: #c4b6d9'
+        if cell == "T = " + volume_nucleotide+" µL":
+            return 'background-color: #9c85c0'
+        if cell == "E = " + volume_enzyme+" µL":
+            return 'background-color: #e3beca'
+        if cell == "W1 = " + volume_W1+" µL":
+            return 'background-color: #f1d77f'
+        if cell == "D = " + volume_D+" µL":
+            return 'background-color: #c9d3be'
+        if cell == "W2 = " + volume_W2+" µL":
+            return 'background-color: #f8c891'
+        if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL":
+             return 'background-color: #b3c5da'
+
+    df = pd.DataFrame(
+        table_volume,
+        index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+        columns=(str(i) for i in range(1,13)))
+
+    table = st.dataframe(df.style.applymap(color_reageants), width=1500)
