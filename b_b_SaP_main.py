@@ -327,4 +327,5 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-table_2 = st.dataframe(df, width=1500)
+with tableau_2:
+    table_2 = st.dataframe(df, width=1500)
