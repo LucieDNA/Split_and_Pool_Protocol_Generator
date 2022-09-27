@@ -313,6 +313,6 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-tableau_1 = st.tabs(['Reagents plate'])
+tableau_1, tableau_2 = st.tabs(['Reagents plate', 'Tip rack'])
 with tableau_1:
     table = st.dataframe(df.style.applymap(color_reageants), width=1500)
