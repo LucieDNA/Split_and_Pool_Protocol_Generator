@@ -45,7 +45,7 @@ with col1:
     #number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
 
 with col1_5:
-    support = st.radio('Solid Support', 'Resin', 'Magnetic beads', index=0)
+    support = st.radio('Solid Support', ('Resin', 'Magnetic beads'), index=0)
     
 with col2:
     st.markdown('   ')
