@@ -324,8 +324,8 @@ for i in range(number_of_cycle+1):
 
 for i in range(4):
     table_tip[4+i, 6] = 'W2 (transfer)'
-    table_tip[4+i, 8] = '     E'
-    table_tip[4+i, 9] = '          W1'
+    table_tip[4+i, 8] = '       E'
+    table_tip[4+i, 9] = '       W1'
     table_tip[4+i, 10] = 'D'
     table_tip[4+i, 11] = 'W2'
 table_tip[4, 7] = 'A'
