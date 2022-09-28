@@ -264,18 +264,27 @@ volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
 volume_Ps_pool_1 = str(int(270/4 * number_of_cycle+150+270))
 pooling_solution = 'W2'
 
+volume_A = 0
+volume_C = 0
+volume_G = 0
+volume_T = 0
 if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
     nb_A += start_seq.count('A')
     volume_A = nb_A*25+100
 
+text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
+text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
+text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
+text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
+
 color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '                  ')
-table_volume[0,0] = "A = " + str(volume_nucleotide+volume_A) +" µL"
-table_volume[1,0] = "C = " + str(volume_nucleotide)+" µL"
-table_volume[2,0] = "G = " + str(volume_nucleotide)+" µL"
-table_volume[3,0] = "T = " + str(volume_nucleotide)+" µL"
+table_volume[0,0] = text_A
+table_volume[1,0] = text_C
+table_volume[2,0] = text_G
+table_volume[3,0] = text_T
 
 table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
 table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
@@ -299,13 +308,13 @@ table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
 def color_reageants(cell):
     if cell == '                  ':
         return 'background-color: #ffffff'
-    if cell == "A = " + str(volume_nucleotide+volume_A)+" µL":
+    if cell == text_A:
         return 'background-color: #ebe7f2'
-    if cell == "C = " + str(volume_nucleotide)+" µL":
+    if cell == text_C:
         return 'background-color: #d7cee6'
-    if cell == "G = " + str(volume_nucleotide)+" µL":
+    if cell == text_G:
         return 'background-color: #c4b6d9'
-    if cell == "T = " + str(volume_nucleotide)+" µL":
+    if cell == text_T:
         return 'background-color: #9c85c0'
     if cell == "E = " + volume_enzyme+" µL":
         return 'background-color: #e3beca'
