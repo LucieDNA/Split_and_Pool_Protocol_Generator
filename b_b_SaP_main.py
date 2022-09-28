@@ -559,5 +559,6 @@ with tab1:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader('Reagents total volumes')
+        st.markdown('dATP = ' +str(volume_nucleotide+volume_A)+" µL")
     with col2:
         st.text('Number of tips = '+ str(nombre_tip))
