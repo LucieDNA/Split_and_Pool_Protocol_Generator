@@ -514,4 +514,4 @@ for row in table_tip:
 with tableau_2:
     table_2 = st.dataframe(df.style.applymap(color_tips), width=2000)
 
-st.text(str(nombre_tip))
+st.text('Number of tips = '+ str(nombre_tip))
