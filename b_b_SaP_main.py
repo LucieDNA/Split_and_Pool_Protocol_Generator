@@ -331,7 +331,7 @@ text_TSTPK = "TSTPK = " + str(volume_TSTPK*nb_psp) +" µL"
 text_TH1X = "TH1X = " + str(volume_TH1X*nb_psp) +" µL"
 text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
 text_Isop = "Isop = " + str(volume_LB*nb_psp) +" µL"
-text_Eth = "Isop = " + str(volume_Eth) +" µL"
+text_Eth = "Eth = " + str(volume_Eth) +" µL"
     
 
 color_enzyme = 'background-color: green'
