@@ -248,19 +248,19 @@ volume_W2 = str(int((0.05 * number_of_cycle+0.15)*1000))
 
 
 if number_of_cycle <= 6:
-    volume_Ps_split_1 = str(int(270* number_of_cycle+150))
+    volume_Ps_split_1 = str(int(270* number_of_cycle+200))
     volume_Ps_split_2 = str(0)
     volume_Ps_split_3 = str(0)
 if 6 < number_of_cycle <= 12:
-    volume_Ps_split_1 = str(int(270 * 6+150))
-    volume_Ps_split_2 = str(int(270 * (number_of_cycle-6)+150))
+    volume_Ps_split_1 = str(int(270 * 6+200))
+    volume_Ps_split_2 = str(int(270 * (number_of_cycle-6)+200))
     volume_Ps_split_3 = str(0)
 if 12 < number_of_cycle <= 19:
-    volume_Ps_split_1 = str(int(270*6+150))
-    volume_Ps_split_2 = str(int(270* 6+150))
-    volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+150))
+    volume_Ps_split_1 = str(int(270*6+200))
+    volume_Ps_split_2 = str(int(270* 6+200))
+    volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+200))
 
-volume_Ps_pool = str(int(270/4 * number_of_cycle+0.2))
+volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
 pooling_solution = 'W2'
 
 color_enzyme = 'background-color: green'
