@@ -264,9 +264,9 @@ volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
 volume_Ps_pool_1 = str(int(270/4 * number_of_cycle+150+270))
 pooling_solution = 'W2'
 
-if end_seq != '' or stat_seq != '':
+if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
-    nb_A += strat_seq.count('A')
+    nb_A += start_seq.count('A')
     volume_A = nb_A*25+100
 
 color_enzyme = 'background-color: green'
