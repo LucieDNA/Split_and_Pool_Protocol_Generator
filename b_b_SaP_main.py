@@ -327,5 +327,15 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
+color_for_tips = ['background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b']
+
+def color_tips(cell):
+    if cell == '                  ':
+        return 'background-color: #ffffff'
+    for i in range(number_of_cycle+1):
+        if cell == "Cycle " + str(i):
+            return color_for_tips[i]
+    
+
 with tableau_2:
     table_2 = st.dataframe(df, width=1500)
