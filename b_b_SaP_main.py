@@ -261,7 +261,7 @@ if 12 < number_of_cycle <= 19:
     volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+200))
 
 volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
-volume_Ps_pool_1 = = str(int(270/4 * number_of_cycle+150+270))
+volume_Ps_pool_1 = str(int(270/4 * number_of_cycle+150+270))
 pooling_solution = 'W2'
 
 color_enzyme = 'background-color: green'
