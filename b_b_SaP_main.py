@@ -240,7 +240,7 @@ with generate_button:
    
 #st.image(image_SaP)
 
-volume_nucleotide = str(int((0.025 * number_of_cycle+0.1)*1000))
+volume_nucleotide = int((0.025 * number_of_cycle+0.1)*1000)
 volume_enzyme = str(int((0.025 * number_of_cycle+0.1)*1000))
 volume_W1 = str(int((0.05 * number_of_cycle+0.15)*1000))
 volume_D =str(int((0.1 * number_of_cycle+0.2)*1000))
@@ -264,10 +264,13 @@ volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
 volume_Ps_pool_1 = str(int(270/4 * number_of_cycle+150+270))
 pooling_solution = 'W2'
 
+if end_seq != '' or stat_seq != '':
+    volume_A = (end_seq.count('A')+strat_seq.count('A'))*25+100
+
 color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '                  ')
-table_volume[0,0] = "A = " + volume_nucleotide+" µL"
+table_volume[0,0] = "A = " + str(volume_nucleotide+volume_A) +" µL"
 table_volume[1,0] = "C = " + volume_nucleotide+" µL"
 table_volume[2,0] = "G = " + volume_nucleotide+" µL"
 table_volume[3,0] = "T = " + volume_nucleotide+" µL"
