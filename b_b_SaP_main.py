@@ -425,7 +425,7 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-tableau_1, tableau_2 = st.tabs(['Reagents plate', 'Tip rack'])
+tab1, tableau_1, tableau_2 = st.tabs(['Main', 'Reagents plate', 'Tip rack'])
 with tableau_1:
     table = st.dataframe(df.style.applymap(color_reageants), width=1500)
 
@@ -554,4 +554,7 @@ for row in table_tip:
 with tableau_2:
     table_2 = st.dataframe(df.style.applymap(color_tips), width=2000)
 
-st.text('Number of tips = '+ str(nombre_tip))
+
+with tab1:
+    st.subheader('Reagents total volumes')
+    st.text('Number of tips = '+ str(nombre_tip))
