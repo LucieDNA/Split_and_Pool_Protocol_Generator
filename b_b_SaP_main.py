@@ -318,7 +318,7 @@ with tableau_1:
     table = st.dataframe(df.style.applymap(color_reageants), width=1500)
 
     
-table_tip = np.full((8,12), '                  ')
+table_tip = np.full((8,12), '                             ')
 for i in range(number_of_cycle+1):
     table_tip[i%8, i//8] = "Transfer " + str(i)
 
@@ -352,11 +352,29 @@ color_for_tips.append('background-color: #b54443')
 
 
 def color_tips(cell):
-    if cell == '                  ':
+    if cell == '                             ':
         return 'background-color: #ffffff'
     for i in range(number_of_cycle+1):
         if cell == "Transfer " + str(i):
             return color_for_tips[i]
+    if cell == 'A':
+        return 'background-color: #ebe7f2'
+    if cell == 'C':
+        return 'background-color: #d7cee6'
+    if cell == 'G':
+        return 'background-color: #c4b6d9'
+    if cell == 'T':
+        return 'background-color: #9c85c0'
+    if cell == 'W2 (transfer)':
+        return 'background-color: #b3c5da'
+    if cell == 'E':
+        return 'background-color: #e3beca'
+    if cell == 'W1':
+        return 'background-color: #f1d77f'
+    if cell == 'D':
+        return 'background-color: #c9d3be'
+    if cell == 'W2':
+        return 'background-color: #f8c891'
     
 
 with tableau_2:
