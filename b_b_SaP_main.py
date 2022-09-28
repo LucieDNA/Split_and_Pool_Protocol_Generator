@@ -261,6 +261,7 @@ if 12 < number_of_cycle <= 19:
     volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+200))
 
 volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
+volume_Ps_pool_1 = = str(int(270/4 * number_of_cycle+150+270))
 pooling_solution = 'W2'
 
 color_enzyme = 'background-color: green'
@@ -285,6 +286,7 @@ for i in range(4):
     table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
+table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -305,7 +307,7 @@ def color_reageants(cell):
         return 'background-color: #c9d3be'
     if cell == "W2 = " + volume_W2+" µL":
         return 'background-color: #f8c891'
-    if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL":
+    if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL" or pooling_solution+" = " +volume_Ps_pool_1+" µL":
          return 'background-color: #b3c5da'
 
 df = pd.DataFrame(
