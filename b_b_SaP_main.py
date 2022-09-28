@@ -299,13 +299,13 @@ table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
 def color_reageants(cell):
     if cell == '                  ':
         return 'background-color: #ffffff'
-    if cell == "A = " + volume_nucleotide+" µL":
+    if cell == "A = " + str(volume_nucleotide+volume_A)+" µL":
         return 'background-color: #ebe7f2'
-    if cell == "C = " + volume_nucleotide+" µL":
+    if cell == "C = " + str(volume_nucleotide)+" µL":
         return 'background-color: #d7cee6'
-    if cell == "G = " + volume_nucleotide+" µL":
+    if cell == "G = " + str(volume_nucleotide)+" µL":
         return 'background-color: #c4b6d9'
-    if cell == "T = " + volume_nucleotide+" µL":
+    if cell == "T = " + str(volume_nucleotide)+" µL":
         return 'background-color: #9c85c0'
     if cell == "E = " + volume_enzyme+" µL":
         return 'background-color: #e3beca'
