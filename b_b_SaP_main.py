@@ -244,7 +244,7 @@ volume_nucleotide = int((0.025 * number_of_cycle+0.1)*1000)
 volume_enzyme = int((0.025 * number_of_cycle+0.1)*1000)
 volume_W1 = int((0.05 * number_of_cycle+0.15)*1000)
 volume_D =int((0.1 * number_of_cycle+0.2)*1000)
-volume_W2 = str(int((0.05 * number_of_cycle+0.15)*1000))
+volume_W2 = int((0.05 * number_of_cycle+0.15)*1000)
 
 
 if number_of_cycle <= 6:
@@ -298,10 +298,11 @@ text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
 text_W1 = "W1 = " + str(volume_W1)+" µL"
 text_D = "D = " + str(volume_D)+" µL"
+text_W2 = "W2 = " + str(volume_W2)+" µL"
 text_E_2 = "E = " + str(volume_E_2)+" µL"
 text_W1_2 = "W1 = " + str(volume_W1_2)+" µL"
 text_D_2 = "D = " + str(volume_D_2)+" µL"
-
+text_W2_2 = "W2 = " + str(volume_W2_2)+" µL"
 
 color_enzyme = 'background-color: green'
 
@@ -324,7 +325,7 @@ for i in range(4):
     table_volume[i,1] = text_E
     table_volume[i,2] = text_W1
     table_volume[i,3] = text_D
-    table_volume[i,4] = "W2 = " + volume_W2+" µL"
+    table_volume[i,4] = text_W2
     table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
@@ -334,7 +335,8 @@ if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
     table_volume[4,2] = text_W1_2
     table_volume[4,3] = text_D_2
-    table_volume[4,4] = text_D_2
+    table_volume[5,3] = text_D_2
+    table_volume[4,4] = text_W2_2
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -353,7 +355,7 @@ def color_reageants(cell):
         return 'background-color: #f1d77f'
     if cell == text_D or cell == text_D_2:
         return 'background-color: #c9d3be'
-    if cell == "W2 = " + volume_W2+" µL":
+    if cell == text_W2 or cell == text_W2_2:
         return 'background-color: #f8c891'
     if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL" or pooling_solution+" = " +volume_Ps_pool_1+" µL":
          return 'background-color: #b3c5da'
