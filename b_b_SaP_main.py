@@ -303,7 +303,7 @@ volume_TSTPK = 250
 volume_TH1X = 400
 volume_LB = 200
 volume_Isop = 450
-volume_eth = 1400
+volume_Eth = 1400
         
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
