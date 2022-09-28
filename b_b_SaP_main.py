@@ -432,9 +432,10 @@ if simple_psp or double_psp:
     table_tip[0, 7] = TH1X
     table_tip[0, 8] = LB
     table_tip[0, 9] = Isop
-    table_tip[0, 10] = Eth
-if double_psp:
+    table_tip[7, 2] = Isop
     table_tip[0, 11] = Eth
+if double_psp:
+    table_tip[0, 10] = Isop
 
 df = pd.DataFrame(
     table_tip,
