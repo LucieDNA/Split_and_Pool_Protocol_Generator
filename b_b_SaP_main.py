@@ -298,6 +298,7 @@ text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
 text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
 text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
+text_E_2 = "E = " + str(volume_E_2)+" µL"
 
 color_enzyme = 'background-color: green'
 
@@ -325,6 +326,7 @@ for i in range(4):
     table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
 table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
+table_volume[4,1] = text_E_2
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -337,7 +339,7 @@ def color_reageants(cell):
         return 'background-color: #c4b6d9'
     if cell == text_T:
         return 'background-color: #9c85c0'
-    if cell == text_E:
+    if cell == text_E or cell == text_E_2:
         return 'background-color: #e3beca'
     if cell == "W1 = " + volume_W1+" µL":
         return 'background-color: #f1d77f'
