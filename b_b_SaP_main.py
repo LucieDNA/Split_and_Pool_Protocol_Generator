@@ -368,7 +368,7 @@ color_for_tips.append('background-color: #f1d77f')
 color_for_tips.append('background-color: #e7bc29')
 color_for_tips.append('background-color: #fdedda')
 color_for_tips.append('background-color: #fadbb5')
-color_for_tips.append('background-color: #F1b166')
+color_for_tips.append('background-color: #f8c891')
 
 
 def color_tips(cell):
