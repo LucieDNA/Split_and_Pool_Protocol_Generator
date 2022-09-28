@@ -433,6 +433,8 @@ if simple_psp or double_psp:
     table_tip[0, 8] = LB
     table_tip[0, 9] = Isop
     table_tip[0, 10] = Eth
+if double_psp:
+    table_tip[0, 11] = Eth
 
 df = pd.DataFrame(
     table_tip,
@@ -489,7 +491,19 @@ def color_tips(cell):
         return 'background-color: #8d59b3'
     if cell == X:
         return 'background-color: #d5d8fb'
-    
+    if cell == eau:
+        return 'background-color: #ff5843'
+    if cell == TSTPK:
+        return 'background-color: #ff6956'
+    if cell == TH1X:
+        return 'background-color: #ff7969'
+    if cell == LB:
+        return 'background-color: #ff8a7b'
+    if cell == Isop:
+        return 'background-color: #ff9b8e'
+    if cell == Eth:
+        return 'background-color: #ffaca1'
+
 
 with tableau_2:
     table_2 = st.dataframe(df.style.applymap(color_tips), width=2000)
