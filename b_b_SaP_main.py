@@ -274,10 +274,13 @@ table_volume[3,0] = "T = " + volume_nucleotide+" µL"
 
 table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
 table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
-table_volume[2,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
+table_volume[2,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
 table_volume[3,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
-table_volume[4,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
-table_volume[5,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+table_volume[4,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
+table_volume[5,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
+table_volume[6,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+table_volume[7,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+table_volume[7,10] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 for i in range(4):
     table_volume[i,1] = "E = " + volume_enzyme+" µL"
     table_volume[i,2] = "W1 = " + volume_W1+" µL"
@@ -358,7 +361,6 @@ color_for_tips.append('background-color: #809ec2')
 color_for_tips.append('background-color: #ebe7f2')
 color_for_tips.append('background-color: #d7cee6')
 color_for_tips.append('background-color: #c4b6d9')
-
 color_for_tips.append('background-color: #9c85c0')
 color_for_tips.append('background-color: #f6e9ed')
 color_for_tips.append('background-color: #ecd3dc')
