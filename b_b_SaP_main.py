@@ -320,7 +320,18 @@ with tableau_1:
     
 table_tip = np.full((8,12), '                  ')
 for i in range(number_of_cycle+1):
-    table_tip[i%8, i//8] = "Cycle " + str(i)
+    table_tip[i%8, i//8] = "Transfer " + str(i)
+
+for i in range(4):
+    table_tip[4+i, 6] = 'W2 (transfer)'
+    table_tip[4+i, 8] = 'E'
+    table_tip[4+i, 9] = 'W1'
+    table_tip[4+i, 10] = 'D'
+    table_tip[4+i, 11] = 'W2'
+table_tip[4, 7] = 'A'
+table_tip[5, 7] = 'C'
+table_tip[6, 7] = 'G'
+table_tip[7, 7] = 'T'
 
 df = pd.DataFrame(
     table_tip,
@@ -340,12 +351,11 @@ color_for_tips.append('background-color: #bc5756')
 color_for_tips.append('background-color: #b54443')
 
 
-
 def color_tips(cell):
     if cell == '                  ':
         return 'background-color: #ffffff'
     for i in range(number_of_cycle+1):
-        if cell == "Cycle " + str(i):
+        if cell == "Transfer " + str(i):
             return color_for_tips[i]
     
 
