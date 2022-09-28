@@ -298,7 +298,12 @@ if end_seq != '' or start_seq != '':
     nb_X = end_seq.count('X')
     nb_X += start_seq.count('X')
     volume_X = nb_X*25 + 100
-
+volume_eau = 150
+volume_TSTPK = 250
+volume_TH1X = 400
+volume_LB = 200
+volume_Isop = 450
+volume_eth = 1400
         
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
@@ -316,6 +321,19 @@ text_W1_2 = "W1 = " + str(volume_W1_2)+" µL"
 text_D_2 = "D = " + str(volume_D_2)+" µL"
 text_W2_2 = "W2 = " + str(volume_W2_2)+" µL"
 
+nb_psp = 0
+if simple_psp:
+    nb_psp = 1
+if double_psp:
+    nb_psp = 2
+text_eau = "H2O = " + str(volume_eau*nb_psp) +" µL"
+text_TSTPK = "TSTPK = " + str(volume_TSTPK*nb_psp) +" µL"
+text_TH1X = "TH1X = " + str(volume_TH1X*nb_psp) +" µL"
+text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
+text_Isop = "Isop = " + str(volume_LB*nb_psp) +" µL"
+text_Eth = "Isop = " + str(volume_Eth) +" µL"
+    
+
 color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '                  ')
@@ -323,6 +341,15 @@ table_volume[0,0] = text_A
 table_volume[1,0] = text_C
 table_volume[2,0] = text_G
 table_volume[3,0] = text_T
+
+table_volume[7,0] = text_eau
+table_volume[7,1] = text_TSTPK
+table_volume[7,2] = text_TH1X
+table_volume[7,3] = text_LB
+table_volume[7,4] = text_Isop
+table_volume[7,5] = text_Eth
+if nb_psp == 2:
+    table_volume[7,6] = text_Eth
 
 table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
 table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
