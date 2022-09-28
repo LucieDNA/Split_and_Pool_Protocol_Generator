@@ -327,7 +327,7 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-color_for_tips = ['background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b', 'background-color: #ed7568', 'background-color: #eb6355', 'background-color: #e95242'] 
+color_for_tips = ['background-color: #fdeeec', 'background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b', 'background-color: #ed7568', 'background-color: #eb6355', 'background-color: #e95242'] 
 color_for_tips.append('background-color: #f8ecec')
 color_for_tips.append('background-color: #f0dad9')
 color_for_tips.append('background-color: #e9c7c7')
@@ -338,6 +338,8 @@ color_for_tips.append('background-color: #cb7c7b')
 color_for_tips.append('background-color: #c46969')
 color_for_tips.append('background-color: #bc5756')
 color_for_tips.append('background-color: #b54443')
+
+
 
 def color_tips(cell):
     if cell == '                  ':
