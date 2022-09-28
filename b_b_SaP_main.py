@@ -567,5 +567,9 @@ with tab1:
         st.markdown('dUTP = ' +str(volume_U)+" µL")
         st.markdown('ideoxyI = ' +str(volume_X)+" µL")
     with col2:
-        st.markdown('dATP = ' +str(volume_nucleotide+volume_A)+" µL")
+        st.markdown('**Buffer**')
+        st.markdown('Elongation buffer = ' +str(volume_enzyme+volume_E_2)+" µL")
+        st.markdown('Wash 1 = ' +str(volume_W1+volume_W1_2)+" µL")
+        st.markdown('Deblock = ' +str(volume_D+volume_D_2*2)+" µL")
+        st.markdown('Wash 2 = ' +str(volume_W2+volume_W2_2)+" µL")
     st.text('Number of tips = '+ str(nombre_tip))
