@@ -273,9 +273,9 @@ color_enzyme = 'background-color: green'
 
 table_volume = np.full((8,12), '                  ')
 table_volume[0,0] = "A = " + str(volume_nucleotide+volume_A) +" µL"
-table_volume[1,0] = "C = " + volume_nucleotide+" µL"
-table_volume[2,0] = "G = " + volume_nucleotide+" µL"
-table_volume[3,0] = "T = " + volume_nucleotide+" µL"
+table_volume[1,0] = "C = " + str(volume_nucleotide)+" µL"
+table_volume[2,0] = "G = " + str(volume_nucleotide)+" µL"
+table_volume[3,0] = "T = " + str(volume_nucleotide)+" µL"
 
 table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
 table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
