@@ -505,6 +505,11 @@ def color_tips(cell):
     if cell == Eth:
         return 'background-color: #ffaca1'
 
+for cell in table_tip:
+    if cell != '                      ':
+        nombre_tip += 1
 
 with tableau_2:
     table_2 = st.dataframe(df.style.applymap(color_tips), width=2000)
+
+st.text(str(nombre_tip))
