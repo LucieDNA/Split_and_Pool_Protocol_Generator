@@ -352,7 +352,7 @@ if end_seq != '' or start_seq != '':
     if end_seq.count('U') != 0 or start_seq.count('U') != 0:
         table_volume[4,0] = text_U
     if end_seq.count('X') != 0 or start_seq.count('X') != 0:
-        table_volume[5,0] = text_T
+        table_volume[5,0] = text_X
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -365,6 +365,10 @@ def color_reageants(cell):
         return 'background-color: #c4b6d9'
     if cell == text_T:
         return 'background-color: #9c85c0'
+    if cell == text_U:
+        return 'background-color: #d5d8fb'
+    if cell == text_X:
+        return 'background-color: #7030a0'
     if cell == text_E or cell == text_E_2:
         return 'background-color: #e3beca'
     if cell == text_W1 or cell == text_W1_2:
