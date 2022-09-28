@@ -242,7 +242,7 @@ with generate_button:
 
 volume_nucleotide = int((0.025 * number_of_cycle+0.1)*1000)
 volume_enzyme = int((0.025 * number_of_cycle+0.1)*1000)
-volume_W1 = str(int((0.05 * number_of_cycle+0.15)*1000))
+volume_W1 = int((0.05 * number_of_cycle+0.15)*1000)
 volume_D =str(int((0.1 * number_of_cycle+0.2)*1000))
 volume_W2 = str(int((0.05 * number_of_cycle+0.15)*1000))
 
@@ -298,7 +298,9 @@ text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
 text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
 text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
+text_W1 = "W1 = " + str(volume_W1)+" µL"
 text_E_2 = "E = " + str(volume_E_2)+" µL"
+text_W1_2 = "W1 = " + str(volume_W1_2)+" µL"
 
 color_enzyme = 'background-color: green'
 
@@ -319,7 +321,7 @@ table_volume[7,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 table_volume[7,10] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 for i in range(4):
     table_volume[i,1] = text_E
-    table_volume[i,2] = "W1 = " + volume_W1+" µL"
+    table_volume[i,2] = text_W1
     table_volume[i,3] = "D = " + volume_D+" µL"
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
     table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
@@ -329,6 +331,7 @@ table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
 
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
+    table_volume[4,2] = text_W1_2
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -343,7 +346,7 @@ def color_reageants(cell):
         return 'background-color: #9c85c0'
     if cell == text_E or cell == text_E_2:
         return 'background-color: #e3beca'
-    if cell == "W1 = " + volume_W1+" µL":
+    if cell == text_W1 or cell == text_W1_2:
         return 'background-color: #f1d77f'
     if cell == "D = " + volume_D+" µL":
         return 'background-color: #c9d3be'
