@@ -272,6 +272,8 @@ volume_E_2 = 0
 volume_W1_2 = 0
 volume_D_2 = 0
 volume_W2_2 = 0
+volume_U = 0
+volume_X = 0
 if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
     nb_A += start_seq.count('A')
@@ -290,11 +292,21 @@ if end_seq != '' or start_seq != '':
     volume_W1_2 = 50*nb_add + 100
     volume_D_2 = 50*nb_add + 100
     volume_W2_2 = 50*nb_add + 100
+    nb_U = end_seq.count('U')
+    nb_U += start_seq.count('U')
+    volume_U = nb_U*25 + 100
+    nb_X = end_seq.count('X')
+    nb_X += start_seq.count('X')
+    volume_X = nb_X*25 + 100
+
+        
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
 text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
 text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
 text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
+text_U = "U = " + str(volume_U) +" µL"
+text_X = "X = " + str(volume_X) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
 text_W1 = "W1 = " + str(volume_W1)+" µL"
 text_D = "D = " + str(volume_D)+" µL"
@@ -337,6 +349,10 @@ if end_seq != '' or start_seq != '':
     table_volume[4,3] = text_D_2
     table_volume[5,3] = text_D_2
     table_volume[4,4] = text_W2_2
+    if end_seq.count('U') != 0 or start_seq.count('U') != 0:
+        table_volume[4,0] = text_U
+    if end_seq.count('X') != 0 or start_seq.count('X') != 0:
+        table_volume[5,0] = text_T
 
 def color_reageants(cell):
     if cell == '                  ':
