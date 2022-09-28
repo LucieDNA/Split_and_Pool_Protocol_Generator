@@ -324,8 +324,8 @@ for i in range(number_of_cycle+1):
 
 for i in range(4):
     table_tip[4+i, 6] = 'W2 (transfer)'
-    table_tip[4+i, 8] = 'E'
-    table_tip[4+i, 9] = 'W1'
+    table_tip[4+i, 8] = '     E     '
+    table_tip[4+i, 9] = '     W1     '
     table_tip[4+i, 10] = 'D'
     table_tip[4+i, 11] = 'W2'
 table_tip[4, 7] = 'A'
@@ -367,9 +367,9 @@ def color_tips(cell):
         return 'background-color: #9c85c0'
     if cell == 'W2 (transfer)':
         return 'background-color: #b3c5da'
-    if cell == 'E':
+    if cell == '     E     ':
         return 'background-color: #e3beca'
-    if cell == 'W1':
+    if cell == '     W1     ':
         return 'background-color: #f1d77f'
     if cell == 'D':
         return 'background-color: #c9d3be'
