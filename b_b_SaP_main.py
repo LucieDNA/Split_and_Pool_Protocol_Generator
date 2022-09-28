@@ -355,7 +355,6 @@ color_for_tips.append('background-color: #b3c5da')
 color_for_tips.append('background-color: #809ec2')
 color_for_tips.append('background-color: #ebe7f2')
 color_for_tips.append('background-color: #d7cee6')
-color_for_tips.append('background-color: #cb7c7b')
 color_for_tips.append('background-color: #c4b6d9')
 
 color_for_tips.append('background-color: #9c85c0')
