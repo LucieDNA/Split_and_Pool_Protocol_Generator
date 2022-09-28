@@ -404,6 +404,12 @@ G = '          G'
 T = '          T'
 U = '          U'
 X = '          X'
+eau = '        H2O'
+TSTPK = '      TSTPK'
+TH1X = '       TH1X'
+LB = '         LB'
+Isop = '       Isop'
+Eth = '        Eth'
 
 
 for i in range(4):
@@ -420,6 +426,13 @@ if end_seq.count('U') != 0 or start_seq.count('U') != 0:
     table_tip[7, 5] = U
 if end_seq.count('X') != 0 or start_seq.count('X') != 0:
     table_tip[6, 5] = X
+if single_psp or double_psp:
+    table_tip[0, 5] = eau
+    table_tip[0, 6] = TSTPK
+    table_tip[0, 7] = TH1X
+    table_tip[0, 8] = LB
+    table_tip[0, 9] = Isop
+    table_tip[0, 10] = Eth
 
 df = pd.DataFrame(
     table_tip,
