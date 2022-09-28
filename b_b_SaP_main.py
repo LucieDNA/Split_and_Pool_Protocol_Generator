@@ -322,19 +322,26 @@ table_tip = np.full((8,12), '                      ')
 for i in range(number_of_cycle+1):
     table_tip[i%8, i//8] = "Transfer " + str(i)
 
-enzyme = '         E'
-wash_1 = '       W1'
+enzyme = '          E'
+wash_1 = '        W1'
+deblock = '          D'
+wash_2 = '        W2'
+A = '          A'
+C = '          C'
+G = '          G'
+T = '          T'
+
 
 for i in range(4):
     table_tip[4+i, 6] = 'W2 (transfer)'
     table_tip[4+i, 8] = enzyme
     table_tip[4+i, 9] = wash_1
-    table_tip[4+i, 10] = 'D'
-    table_tip[4+i, 11] = 'W2'
-table_tip[4, 7] = 'A'
-table_tip[5, 7] = 'C'
-table_tip[6, 7] = 'G'
-table_tip[7, 7] = 'T'
+    table_tip[4+i, 10] = deblock
+    table_tip[4+i, 11] = wash_2
+table_tip[4, 7] = A
+table_tip[5, 7] = C
+table_tip[6, 7] = G
+table_tip[7, 7] = T
 
 df = pd.DataFrame(
     table_tip,
@@ -360,13 +367,13 @@ def color_tips(cell):
     for i in range(number_of_cycle+1):
         if cell == "Transfer " + str(i):
             return color_for_tips[i]
-    if cell == 'A':
+    if cell == A:
         return 'background-color: #ebe7f2'
-    if cell == 'C':
+    if cell == C:
         return 'background-color: #d7cee6'
-    if cell == 'G':
+    if cell == G:
         return 'background-color: #c4b6d9'
-    if cell == 'T':
+    if cell == T:
         return 'background-color: #9c85c0'
     if cell == 'W2 (transfer)':
         return 'background-color: #b3c5da'
@@ -374,9 +381,9 @@ def color_tips(cell):
         return 'background-color: #e3beca'
     if cell == wash_1:
         return 'background-color: #f1d77f'
-    if cell == 'D':
+    if cell == deblock:
         return 'background-color: #c9d3be'
-    if cell == 'W2':
+    if cell == wash_2:
         return 'background-color: #f8c891'
     
 
