@@ -247,7 +247,7 @@ volume_D =str(int((0.1 * number_of_cycle+0.1)*1000))
 volume_W2 = str(int((0.05 * number_of_cycle+0.1)*1000))
 
 
-if number_of_cycle <= 5:
+if number_of_cycle <= 6:
     volume_Ps_split_1 = str(int(270* number_of_cycle+0.1))
     volume_Ps_split_2 = str(0)
     volume_Ps_split_3 = str(0)
@@ -327,7 +327,16 @@ df = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-color_for_tips = ['background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b']
+color_for_tips = ['background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b', 'background-color: #ed7568', 'background-color: #eb6355', 'background-color: #e95242'] 
+color_for_tips.append('background-color: #e7e7eb')
+color_for_tips.append('background-color: #cfd0d7')
+color_for_tips.append('background-color: #b7b8c2')
+color_for_tips.append('background-color: #9fa0ae')
+color_for_tips.append('background-color: #87899a')
+color_for_tips.append('background-color: #6e7186')
+color_for_tips.append('background-color: #565972')
+color_for_tips.append('background-color: #3e415d')
+color_for_tips.append('background-color: #262a49')
 
 def color_tips(cell):
     if cell == '                  ':
