@@ -243,7 +243,7 @@ with generate_button:
 volume_nucleotide = int((0.025 * number_of_cycle+0.1)*1000)
 volume_enzyme = int((0.025 * number_of_cycle+0.1)*1000)
 volume_W1 = int((0.05 * number_of_cycle+0.15)*1000)
-volume_D =str(int((0.1 * number_of_cycle+0.2)*1000))
+volume_D =int((0.1 * number_of_cycle+0.2)*1000)
 volume_W2 = str(int((0.05 * number_of_cycle+0.15)*1000))
 
 
@@ -270,8 +270,7 @@ volume_G = 0
 volume_T = 0
 volume_E_2 = 0
 volume_W1_2 = 0
-volume_D_2_1 = 0
-volume_D_2_2 = 0
+volume_D_2 = 0
 volume_W2_2 = 0
 if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
@@ -289,8 +288,7 @@ if end_seq != '' or start_seq != '':
     nb_add = len(end_seq) + len(start_seq)
     volume_E_2 = 25*nb_add + 100
     volume_W1_2 = 50*nb_add + 100
-    volume_D_2_1 = 50*nb_add + 100
-    volume_D_2_2 = 50*nb_add + 100
+    volume_D_2 = 50*nb_add + 100
     volume_W2_2 = 50*nb_add + 100
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
@@ -299,8 +297,11 @@ text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
 text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
 text_W1 = "W1 = " + str(volume_W1)+" µL"
+text_D = "D = " + str(volume_D)+" µL"
 text_E_2 = "E = " + str(volume_E_2)+" µL"
 text_W1_2 = "W1 = " + str(volume_W1_2)+" µL"
+text_D_2 = "D = " + str(volume_D_2)+" µL"
+
 
 color_enzyme = 'background-color: green'
 
@@ -322,7 +323,7 @@ table_volume[7,10] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 for i in range(4):
     table_volume[i,1] = text_E
     table_volume[i,2] = text_W1
-    table_volume[i,3] = "D = " + volume_D+" µL"
+    table_volume[i,3] = text_D
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
     table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
@@ -332,6 +333,8 @@ table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
     table_volume[4,2] = text_W1_2
+    table_volume[4,3] = text_D_2
+    table_volume[4,4] = text_D_2
 
 def color_reageants(cell):
     if cell == '                  ':
@@ -348,7 +351,7 @@ def color_reageants(cell):
         return 'background-color: #e3beca'
     if cell == text_W1 or cell == text_W1_2:
         return 'background-color: #f1d77f'
-    if cell == "D = " + volume_D+" µL":
+    if cell == text_D or cell == text_D_2:
         return 'background-color: #c9d3be'
     if cell == "W2 = " + volume_W2+" µL":
         return 'background-color: #f8c891'
