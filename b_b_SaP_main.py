@@ -505,6 +505,7 @@ def color_tips(cell):
     if cell == Eth:
         return 'background-color: #ffaca1'
 
+nombre_tip = 0
 for row in table_tip:
     for cell in row:
         if cell != '                      ':
