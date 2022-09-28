@@ -560,5 +560,10 @@ with tab1:
     with col1:
         st.subheader('Reagents total volumes')
         st.markdown('dATP = ' +str(volume_nucleotide+volume_A)+" µL")
+        st.markdown('dCTP = ' +str(volume_nucleotide+volume_C)+" µL")
+        st.markdown('dGTP = ' +str(volume_nucleotide+volume_G)+" µL")
+        st.markdown('dTTP = ' +str(volume_nucleotide+volume_T)+" µL")
+        st.markdown('dUTP = ' +str(volume_U)+" µL")
+        st.markdown('IdeoxyI = ' +str(volume_X)+" µL")
     with col2:
         st.text('Number of tips = '+ str(nombre_tip))
