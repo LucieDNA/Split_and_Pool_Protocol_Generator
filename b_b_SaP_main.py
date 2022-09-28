@@ -404,8 +404,6 @@ def color_reageants(cell):
         return 'background-color: #c9d3be'
     if cell == text_W2 or cell == text_W2_2:
         return 'background-color: #f8c891'
-    if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL" or pooling_solution+" = " +volume_Ps_pool_1+" µL":
-        return 'background-color: #b3c5da'
     if cell == text_eau:
         return 'background-color: #ff5843'
     if cell == text_TSTPK:
@@ -418,6 +416,9 @@ def color_reageants(cell):
         return 'background-color: #ff9b8e'
     if cell == text_Eth:
         return 'background-color: #ffaca1'
+    if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL" or pooling_solution+" = " +volume_Ps_pool_1+" µL":
+        return 'background-color: #b3c5da'
+    
 
 df = pd.DataFrame(
     table_volume,
