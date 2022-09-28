@@ -367,9 +367,9 @@ def color_tips(cell):
         return 'background-color: #9c85c0'
     if cell == 'W2 (transfer)':
         return 'background-color: #b3c5da'
-    if cell == '     E':
+    if cell == '       E':
         return 'background-color: #e3beca'
-    if cell == '          W1':
+    if cell == '       W1':
         return 'background-color: #f1d77f'
     if cell == 'D':
         return 'background-color: #c9d3be'
