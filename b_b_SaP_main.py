@@ -326,7 +326,9 @@ for i in range(4):
     table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
     table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
 table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
-table_volume[4,1] = text_E_2
+
+if end_seq != '' or start_seq != '':
+    table_volume[4,1] = text_E_2
 
 def color_reageants(cell):
     if cell == '                  ':
