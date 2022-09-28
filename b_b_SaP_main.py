@@ -556,5 +556,8 @@ with tableau_2:
 
 
 with tab1:
-    st.subheader('Reagents total volumes')
-    st.text('Number of tips = '+ str(nombre_tip))
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader('Reagents total volumes')
+    with col2:
+        st.text('Number of tips = '+ str(nombre_tip))
