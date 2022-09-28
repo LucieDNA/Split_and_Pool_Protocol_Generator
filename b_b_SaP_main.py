@@ -402,6 +402,8 @@ A = '          A'
 C = '          C'
 G = '          G'
 T = '          T'
+U = '          U'
+X = '          X'
 
 
 for i in range(4):
@@ -414,6 +416,10 @@ table_tip[4, 7] = A
 table_tip[5, 7] = C
 table_tip[6, 7] = G
 table_tip[7, 7] = T
+if end_seq.count('U') != 0 or start_seq.count('U') != 0:
+    table_tip[7, 5] = U
+if end_seq.count('X') != 0 or start_seq.count('X') != 0:
+    table_tip[6, 5] = X
 
 df = pd.DataFrame(
     table_tip,
@@ -466,6 +472,10 @@ def color_tips(cell):
         return 'background-color: #c9d3be'
     if cell == wash_2:
         return 'background-color: #f8c891'
+    if cell == U:
+        return 'background-color: #7e45aa'
+    if cell == X:
+        return 'background-color: #d5d8fb'
     
 
 with tableau_2:
