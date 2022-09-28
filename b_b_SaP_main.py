@@ -327,7 +327,7 @@ if simple_psp:
 if double_psp:
     nb_psp = 2
 text_eau = "H2O = " + str(volume_eau*nb_psp) +" µL"
-text_TSTPK = "TSTPK = " + str(volume_TSTPK*nb_psp) +" µL"
+text_TSTPK = "TSTP = " + str(volume_TSTPK*nb_psp) +" µL"
 text_TH1X = "TH1X = " + str(volume_TH1X*nb_psp) +" µL"
 text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
 text_Isop = "Isop = " + str(volume_LB*nb_psp) +" µL"
@@ -445,7 +445,7 @@ T = '          T'
 U = '          U'
 X = '          X'
 eau = '       H2O'
-TSTPK = '       TSTP'
+TSTPK = '       TSTPK'
 TH1X = '      TH1X'
 LB = '         LB'
 Isop = '       Isop'
