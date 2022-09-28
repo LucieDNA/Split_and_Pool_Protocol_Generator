@@ -241,7 +241,7 @@ with generate_button:
 #st.image(image_SaP)
 
 volume_nucleotide = int((0.025 * number_of_cycle+0.1)*1000)
-volume_enzyme = str(int((0.025 * number_of_cycle+0.1)*1000))
+volume_enzyme = int((0.025 * number_of_cycle+0.1)*1000)
 volume_W1 = str(int((0.05 * number_of_cycle+0.15)*1000))
 volume_D =str(int((0.1 * number_of_cycle+0.2)*1000))
 volume_W2 = str(int((0.05 * number_of_cycle+0.15)*1000))
@@ -268,6 +268,11 @@ volume_A = 0
 volume_C = 0
 volume_G = 0
 volume_T = 0
+volume_E_2 = 0
+volume_W1_2 = 0
+volume_D_2_1 = 0
+volume_D_2_2 = 0
+volume_W2_2 = 0
 if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
     nb_A += start_seq.count('A')
@@ -281,11 +286,18 @@ if end_seq != '' or start_seq != '':
     nb_T = end_seq.count('T')
     nb_T += start_seq.count('T')
     volume_T = nb_T*25
+    nb_add = len(end_seq) + len(start_seq)
+    volume_E_2 = 25*nb_add + 100
+    volume_W1_2 = 50*nb_add + 100
+    volume_D_2_1 = 50*nb_add + 100
+    volume_D_2_2 = 50*nb_add + 100
+    volume_W2_2 = 50*nb_add + 100
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
 text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
 text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
 text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
+text_E = "E = " + str(volume_enzyme)+" µL"
 
 color_enzyme = 'background-color: green'
 
@@ -305,7 +317,7 @@ table_volume[6,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 table_volume[7,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 table_volume[7,10] = pooling_solution+" = " +volume_Ps_split_3+" µL"
 for i in range(4):
-    table_volume[i,1] = "E = " + volume_enzyme+" µL"
+    table_volume[i,1] = text_E
     table_volume[i,2] = "W1 = " + volume_W1+" µL"
     table_volume[i,3] = "D = " + volume_D+" µL"
     table_volume[i,4] = "W2 = " + volume_W2+" µL"
@@ -325,7 +337,7 @@ def color_reageants(cell):
         return 'background-color: #c4b6d9'
     if cell == text_T:
         return 'background-color: #9c85c0'
-    if cell == "E = " + volume_enzyme+" µL":
+    if cell == text_E:
         return 'background-color: #e3beca'
     if cell == "W1 = " + volume_W1+" µL":
         return 'background-color: #f1d77f'
