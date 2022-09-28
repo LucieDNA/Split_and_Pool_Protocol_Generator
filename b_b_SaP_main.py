@@ -328,15 +328,16 @@ df = pd.DataFrame(
     columns=(str(i) for i in range(1,13)))
 
 color_for_tips = ['background-color: #fbdcd9', 'background-color: #f8cbc6', 'background-color: #f6bab3', 'background-color: #f4a9a1', 'background-color: #f2978e', 'background-color: #f0867b', 'background-color: #ed7568', 'background-color: #eb6355', 'background-color: #e95242'] 
-color_for_tips.append('background-color: #e7e7eb')
-color_for_tips.append('background-color: #cfd0d7')
-color_for_tips.append('background-color: #b7b8c2')
-color_for_tips.append('background-color: #9fa0ae')
-color_for_tips.append('background-color: #87899a')
-color_for_tips.append('background-color: #6e7186')
-color_for_tips.append('background-color: #565972')
-color_for_tips.append('background-color: #3e415d')
-color_for_tips.append('background-color: #262a49')
+color_for_tips.append('background-color: #f8ecec')
+color_for_tips.append('background-color: #f0dad9')
+color_for_tips.append('background-color: #e9c7c7')
+color_for_tips.append('background-color: #e1b4b4')
+color_for_tips.append('background-color: #daa2a1')
+color_for_tips.append('background-color: #d38f8e')
+color_for_tips.append('background-color: #cb7c7b')
+color_for_tips.append('background-color: #c46969')
+color_for_tips.append('background-color: #bc5756')
+color_for_tips.append('background-color: #b54443')
 
 def color_tips(cell):
     if cell == '                  ':
