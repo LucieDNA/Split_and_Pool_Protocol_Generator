@@ -327,7 +327,7 @@ if simple_psp:
 if double_psp:
     nb_psp = 2
 text_eau = "H2O = " + str(volume_eau*nb_psp) +" µL"
-text_TSTPK = "TSTP = " + str(volume_TSTPK*nb_psp) +" µL"
+text_TSTPK = "TSTPK = " + str(volume_TSTPK*nb_psp) +" µL"
 text_TH1X = "TH1X = " + str(volume_TH1X*nb_psp) +" µL"
 text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
 text_Isop = "Isop = " + str(volume_LB*nb_psp) +" µL"
@@ -336,7 +336,7 @@ text_Eth = "Eth = " + str(volume_Eth) +" µL"
 
 color_enzyme = 'background-color: green'
 
-table_volume = np.full((8,12), '                  ')
+table_volume = np.full((8,12), '               ')
 table_volume[0,0] = text_A
 table_volume[1,0] = text_C
 table_volume[2,0] = text_G
@@ -382,7 +382,7 @@ if end_seq != '' or start_seq != '':
         table_volume[5,0] = text_X
 
 def color_reageants(cell):
-    if cell == '                  ':
+    if cell == '               ':
         return 'background-color: #ffffff'
     if cell == text_A:
         return 'background-color: #ebe7f2'
