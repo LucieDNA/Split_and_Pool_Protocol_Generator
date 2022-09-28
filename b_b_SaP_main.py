@@ -366,9 +366,9 @@ def color_reageants(cell):
     if cell == text_T:
         return 'background-color: #9c85c0'
     if cell == text_U:
-        return 'background-color: #d5d8fb'
+        return 'background-color: #7e45aa'
     if cell == text_X:
-        return 'background-color: #7030a0'
+        return 'background-color: #d5d8fb'
     if cell == text_E or cell == text_E_2:
         return 'background-color: #e3beca'
     if cell == text_W1 or cell == text_W1_2:
