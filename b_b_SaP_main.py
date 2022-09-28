@@ -426,7 +426,7 @@ if end_seq.count('U') != 0 or start_seq.count('U') != 0:
     table_tip[7, 5] = U
 if end_seq.count('X') != 0 or start_seq.count('X') != 0:
     table_tip[6, 5] = X
-if single_psp or double_psp:
+if simple_psp or double_psp:
     table_tip[0, 5] = eau
     table_tip[0, 6] = TSTPK
     table_tip[0, 7] = TH1X
