@@ -437,4 +437,4 @@ def color_tips(cell):
     
 
 with tableau_2:
-    table_2 = st.dataframe(df.style.applymap(color_tips), width=1500)
+    table_2 = st.dataframe(df.style.applymap(color_tips), width=2000)
