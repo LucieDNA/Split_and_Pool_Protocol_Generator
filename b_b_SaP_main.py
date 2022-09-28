@@ -271,16 +271,16 @@ volume_T = 0
 if end_seq != '' or start_seq != '':
     nb_A = end_seq.count('A')
     nb_A += start_seq.count('A')
-    volume_A = nb_A*25+100
+    volume_A = nb_A*25
     nb_C = end_seq.count('C')
     nb_C += start_seq.count('C')
-    volume_C = nb_C*25+100
+    volume_C = nb_C*25
     nb_G = end_seq.count('G')
     nb_G += start_seq.count('G')
-    volume_G = nb_C*25+100
+    volume_G = nb_C*25
     nb_T = end_seq.count('T')
     nb_T += start_seq.count('T')
-    volume_T = nb_T*25+100
+    volume_T = nb_T*25
 
 text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
 text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
