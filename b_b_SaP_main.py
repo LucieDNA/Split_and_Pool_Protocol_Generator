@@ -593,7 +593,7 @@ with tab1:
         st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270*nb_end_well)+" µL</span>", unsafe_allow_html=True)
     with col3:
-        st.markdown('**Buffer with enzymes preparation**')
+        st.markdown('**Elongation buffer preparation**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
         st.markdown("* Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL", unsafe_allow_html=True)
         st.markdown("* Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
