@@ -378,6 +378,8 @@ for i in range(4):
     table_volume[i,9] = text_pool
     table_volume[i,10] = text_pool
 table_volume[0,8] = text_pool_1
+if nb_end_well == 2:
+    table_volume[1,8] = text_pool_1
 
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
@@ -575,17 +577,17 @@ with tab1:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("**Nucleotides**")
-        st.markdown("<span style='background-color: #ebe7f2;'>dATP = " +str(volume_nucleotide+volume_A)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #d7cee6;'>dCTP = " +str(volume_nucleotide+volume_C)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #c4b6d9;'>dGTP = " +str(volume_nucleotide+volume_G)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #9c85c0;'>dTTP = " +str(volume_nucleotide+volume_T)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #9b6ebd;'>dUTP = " +str(volume_U)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #ebe7f2;'>dATP = " +str(volume_nucleotide+volume_A*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #d7cee6;'>dCTP = " +str(volume_nucleotide+volume_C*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #c4b6d9;'>dGTP = " +str(volume_nucleotide+volume_G*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #9c85c0;'>dTTP = " +str(volume_nucleotide+volume_T*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #9b6ebd;'>dUTP = " +str(volume_U*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X*nb_end_well)+" µL</span>", unsafe_allow_html=True)
     with col2:
         st.markdown('**Buffer**')
-        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1+volume_W1_2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1+volume_W1_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270*nb_end_well)+" µL</span>", unsafe_allow_html=True)
     st.text('Number of tips = '+ str(nombre_tip))
