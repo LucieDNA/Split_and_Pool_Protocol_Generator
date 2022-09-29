@@ -595,6 +595,6 @@ with tab1:
     with col3:
         st.markdown('**Buffer with enzymes preparation**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #e3beca;'>Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("*Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
+        st.markdown("* Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL", unsafe_allow_html=True)
+        st.markdown("* Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
     st.text('Number of tips = '+ str(nombre_tip))
