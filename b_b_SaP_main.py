@@ -592,10 +592,10 @@ table_filter[1,10], table_filter[4,0], table_filter[5,0], table_filter[6,0], tab
 table_filter[2,10], table_filter[4,1], table_filter[5,1], table_filter[6,1], table_filter[7,1], = 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11'
 table_filter[3,10], table_filter[4,2], table_filter[5,2], table_filter[6,2], table_filter[7,2], = 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12'
 
-table_filter[0,3], table_filter[4,4], table_filter[5,4], table_filter[6,4], table_filter[7,4], = 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13'
-table_filter[1,3], table_filter[4,5], table_filter[5,5], table_filter[6,5], table_filter[7,5], = 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14'
-table_filter[2,3], table_filter[4,6], table_filter[5,6], table_filter[6,6], table_filter[7,6], = 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15'
-table_filter[3,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
+table_filter[4,3], table_filter[4,4], table_filter[5,4], table_filter[6,4], table_filter[7,4], = 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13'
+table_filter[5,3], table_filter[4,5], table_filter[5,5], table_filter[6,5], table_filter[7,5], = 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14'
+table_filter[6,3], table_filter[4,6], table_filter[5,6], table_filter[6,6], table_filter[7,6], = 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15'
+table_filter[7,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
 
 
 def color_filter(cell):
