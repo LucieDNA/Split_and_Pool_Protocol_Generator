@@ -592,7 +592,7 @@ df = pd.DataFrame(
     columns=(str(i) for i in range(1,13)))
 
 with tableau_3:
-    st.dataframe(df, width=3000)
+    st.dataframe(df.style.applymap(color_filter), width=3000)
                                                  
                                                  
 with tab1:
