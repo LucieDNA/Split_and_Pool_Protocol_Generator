@@ -264,6 +264,10 @@ volume_Ps_pool = int(270/4 * number_of_cycle+150)
 volume_Ps_pool_1 = int(270/4 * number_of_cycle+150+270)
 pooling_solution = 'W2'
 
+nb_end_well = 1
+if control_synth:
+    nb_end_well = 2
+
 volume_A = 0
 volume_C = 0
 volume_G = 0
@@ -306,12 +310,12 @@ volume_Isop = 450
 volume_Eth = 1400
         
 
-text_A = "A = " + str(volume_nucleotide+volume_A) +" µL"
-text_C = "C = " + str(volume_nucleotide+volume_C) +" µL"
-text_G = "G = " + str(volume_nucleotide+volume_G) +" µL"
-text_T = "T = " + str(volume_nucleotide+volume_T) +" µL"
-text_U = "U = " + str(volume_U) +" µL"
-text_X = "X = " + str(volume_X) +" µL"
+text_A = "A = " + str(volume_nucleotide+volume_A*nb_end_well) +" µL"
+text_C = "C = " + str(volume_nucleotide+volume_C*nb_end_well) +" µL"
+text_G = "G = " + str(volume_nucleotide+volume_G*nb_end_well) +" µL"
+text_T = "T = " + str(volume_nucleotide+volume_T*nb_end_well) +" µL"
+text_U = "U = " + str(volume_U*nb_end_well) +" µL"
+text_X = "X = " + str(volume_X*nb_end_well) +" µL"
 text_E = "E = " + str(volume_enzyme)+" µL"
 text_W1 = "W1 = " + str(volume_W1)+" µL"
 text_D = "D = " + str(volume_D)+" µL"
@@ -385,6 +389,12 @@ if end_seq != '' or start_seq != '':
         table_volume[4,0] = text_U
     if end_seq.count('X') != 0 or start_seq.count('X') != 0:
         table_volume[5,0] = text_X
+if nb_end_well == 2:
+    table_volume[5,1] = text_E_2
+    table_volume[5,2] = text_W1_2
+    table_volume[6,3] = text_D_2
+    table_volume[6,4] = text_D_2
+    table_volume[5,4] = text_W2_2
 
 def color_reageants(cell):
     if cell == '               ':
