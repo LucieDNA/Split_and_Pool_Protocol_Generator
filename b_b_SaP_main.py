@@ -660,7 +660,7 @@ def color_filter(cell):
         if cell == 'Cycle '+str(i):
             return color_for_tips[i]
     if cell == 'Sample':
-    return 'background-color: #ff5843'
+        return 'background-color: #ff5843'
 
 df = pd.DataFrame(
     table_filter,
