@@ -332,7 +332,11 @@ text_TH1X = "TH1X = " + str(volume_TH1X*nb_psp) +" µL"
 text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
 text_Isop = "Isop = " + str(volume_Isop*nb_psp) +" µL"
 text_Eth = "Eth = " + str(volume_Eth) +" µL"
-    
+text_split_1 = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
+text_split_2 = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"    
+text_split_3 = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
+text_pool = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
+text_pool_1 = pooling_solution+" = " +str(volume_Ps_pool_1)+" µL"
 
 color_enzyme = 'background-color: green'
 
@@ -352,24 +356,24 @@ if simple_psp or double_psp:
 if nb_psp == 2:
     table_volume[7,6] = text_Eth
 
-table_volume[0,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
-table_volume[1,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
-table_volume[2,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
-table_volume[3,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
-table_volume[4,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
-table_volume[5,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
-table_volume[6,11] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
-table_volume[7,11] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
-table_volume[7,10] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
+table_volume[0,11] = text_split_1
+table_volume[1,11] = text_split_1
+table_volume[2,11] = text_split_1
+table_volume[3,11] = text_split_2
+table_volume[4,11] = text_split_2
+table_volume[5,11] = text_split_2
+table_volume[6,11] = text_split_3
+table_volume[7,11] = text_split_3
+table_volume[7,10] = text_split_3
 for i in range(4):
     table_volume[i,1] = text_E
     table_volume[i,2] = text_W1
     table_volume[i,3] = text_D
     table_volume[i,4] = text_W2
-    table_volume[i,8] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
-    table_volume[i,9] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
-    table_volume[i,10] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
-table_volume[0,8] = pooling_solution+" = " +str(volume_Ps_pool_1)+" µL"
+    table_volume[i,8] = text_pool
+    table_volume[i,9] = text_pool
+    table_volume[i,10] = text_pool
+table_volume[0,8] = text_pool_1
 
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
@@ -417,7 +421,7 @@ def color_reageants(cell):
         return 'background-color: #ff9b8e'
     if cell == text_Eth:
         return 'background-color: #ffaca1'
-    if cell == pooling_solution+" = " +volume_Ps_pool+" µL" or pooling_solution+" = " +volume_Ps_split_1+" µL" or pooling_solution+" = " +volume_Ps_split_2+" µL" or pooling_solution+" = " +volume_Ps_split_3+" µL" or pooling_solution+" = " +volume_Ps_pool_1+" µL":
+    if cell == text_split_1 or cell == text_split_2 or cell == text_split_3 or cell == text_pool or cell == text_pool_1:
         return 'background-color: #b3c5da'
     
 
