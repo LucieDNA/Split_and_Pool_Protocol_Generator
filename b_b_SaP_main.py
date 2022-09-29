@@ -605,6 +605,6 @@ with tab1:
             st.markdown("<span style='background-color: #ff7969;'>TH1X = " +str(volume_TH1X*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff8a7b;'>Liberation buffer = " +str(volume_LB*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff9b8e;'>Isopropanol = " +str(volume_Isop*nb_psp)+" µL</span>", unsafe_allow_html=True)
-            st.markdown("<span style='background-color: #ffaca1;'>Ethanol = " +str(volume_Isop*nb_psp)+" µL</span>", unsafe_allow_html=True)
+            st.markdown("<span style='background-color: #ffaca1;'>Ethanol = " +str(volume_Eth*nb_psp)+" µL</span>", unsafe_allow_html=True)
 
     st.text('Number of tips = '+ str(nombre_tip))
