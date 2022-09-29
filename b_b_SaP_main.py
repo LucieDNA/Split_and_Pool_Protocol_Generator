@@ -601,7 +601,7 @@ with tab1:
             st.markdown('**Reagents for PSP**')
             st.markdown("<span style='background-color: #ff5843;'>H<sub>2</sub>O = " +str(volume_eau*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff6956;'>TSTPK = " +str(volume_TSTPK*nb_psp)+" µL : </span>", unsafe_allow_html=True)
-            st.markdown("--&emsp; TST = " +str(volume_TSTPK*nb_psp)+" µL <br> --&emsp; Enzyme PK = " +str(volume_TSTPK*nb_psp*1/10)+" µL", unsafe_allow_html=True)
+            st.markdown("--&emsp; TST = " +str(volume_TSTPK*nb_psp)+" µL <br> --&emsp; Enzyme PK = " +str(volume_TSTPK*nb_psp*0.010667)+" µL", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff7969;'>TH1X = " +str(volume_TH1X*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff8a7b;'>Liberation buffer = " +str(volume_LB*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff9b8e;'>Isopropanol = " +str(volume_Isop*nb_psp)+" µL</span>", unsafe_allow_html=True)
