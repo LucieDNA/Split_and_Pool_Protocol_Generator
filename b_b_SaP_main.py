@@ -565,7 +565,7 @@ with tab1:
         st.markdown("<span style='background-color: #d7cee6;'>dCTP = " +str(volume_nucleotide+volume_C)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #c4b6d9;'>dGTP = " +str(volume_nucleotide+volume_G)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #9c85c0;'>dTTP = " +str(volume_nucleotide+volume_T)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #9b6ebd;'>dUTP = " +str(volume_U)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #8d59b3;'>dUTP = " +str(volume_U)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X)+" µL</span>", unsafe_allow_html=True)
     with col2:
         st.markdown('**Buffer**')
