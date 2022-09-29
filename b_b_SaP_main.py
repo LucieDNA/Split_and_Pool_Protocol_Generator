@@ -581,8 +581,10 @@ with tab1:
         st.markdown("<span style='background-color: #d7cee6;'>dCTP = " +str(volume_nucleotide+volume_C*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #c4b6d9;'>dGTP = " +str(volume_nucleotide+volume_G*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #9c85c0;'>dTTP = " +str(volume_nucleotide+volume_T*nb_end_well)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #9b6ebd;'>dUTP = " +str(volume_U*nb_end_well)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        if end_seq.count('U') != 0 or start_seq.count('U') != 0:
+            st.markdown("<span style='background-color: #9b6ebd;'>dUTP = " +str(volume_U*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        if end_seq.count('X') != 0 or start_seq.count('X') != 0:
+            st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X*nb_end_well)+" µL</span>", unsafe_allow_html=True)
     with col2:
         st.markdown('**Buffer**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
