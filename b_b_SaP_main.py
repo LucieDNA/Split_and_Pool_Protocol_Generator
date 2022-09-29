@@ -676,7 +676,7 @@ with tableau_3:
                                                  
 with tab1:
     st.subheader('Reagents total volumes')
-    col1, col2, col3, col4 = st.columns([1, 2, 2, 2])
+    col1, col2, col3, col4 = st.columns([1, 2, 2, 3])
     with col1:
         st.markdown("**Nucleotides**")
         st.markdown("<span style='background-color: #ebe7f2;'>dATP = " +str(volume_nucleotide+volume_A*nb_end_well)+" µL</span>", unsafe_allow_html=True)
