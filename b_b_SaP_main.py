@@ -606,5 +606,5 @@ with tab1:
             st.markdown("<span style='background-color: #ffaca1;'>Ethanol = " +str(volume_Eth*nb_psp)+" µL</span>", unsafe_allow_html=True)
     with col4 :
         st.subheader('*Number of tips = '+ str(nombre_tip))
-        st.markdown('**Number of tips = '+ str(nombre_tip)'**')
+        st.markdown('**Number of tips = '+ str(nombre_tip) +'**')
   
