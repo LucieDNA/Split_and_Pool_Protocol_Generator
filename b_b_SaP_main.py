@@ -342,12 +342,13 @@ table_volume[1,0] = text_C
 table_volume[2,0] = text_G
 table_volume[3,0] = text_T
 
-table_volume[7,0] = text_eau
-table_volume[7,1] = text_TSTPK
-table_volume[7,2] = text_TH1X
-table_volume[7,3] = text_LB
-table_volume[7,4] = text_Isop
-table_volume[7,5] = text_Eth
+if simple_psp or double_psp:
+    table_volume[7,0] = text_eau
+    table_volume[7,1] = text_TSTPK
+    table_volume[7,2] = text_TH1X
+    table_volume[7,3] = text_LB
+    table_volume[7,4] = text_Isop
+    table_volume[7,5] = text_Eth
 if nb_psp == 2:
     table_volume[7,6] = text_Eth
 
