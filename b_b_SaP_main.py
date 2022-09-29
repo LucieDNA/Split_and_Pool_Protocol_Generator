@@ -595,7 +595,7 @@ with tab1:
     with col3:
         st.markdown('**Elongation buffer preparation**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
-        st.markdown("* Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL", unsafe_allow_html=True)
+        st.markdown("* Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL <br> * Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
         st.markdown("* Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
     if simple_psp or double_psp:
         with col4:
