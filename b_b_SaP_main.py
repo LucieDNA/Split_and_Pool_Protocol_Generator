@@ -690,7 +690,7 @@ with tab1:
     with col2:
         st.markdown('**Buffer**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme*4+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
-        st.markdown("--&emsp; Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL <br> --&emsp; Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
+        st.markdown("--&emsp; Enzyme M96 = " +str((volume_enzyme*4+volume_E_2*nb_end_well)*1/5)+" µL <br> --&emsp; Enzyme buffer = " +str((volume_enzyme*4+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1*4+volume_W1_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D*4+volume_D_2*2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2*4+volume_W2_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
