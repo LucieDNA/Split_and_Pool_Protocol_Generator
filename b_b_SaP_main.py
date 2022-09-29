@@ -580,6 +580,12 @@ table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], tabl
 table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3'
 table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4'
 
+
+def color_filter(cell):
+    for i in range(1, number_of_cycle+1):
+        if cell == 'Cycle '+str(i):
+            return color_for_tips[i]
+
 df = pd.DataFrame(
     table_filter,
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
