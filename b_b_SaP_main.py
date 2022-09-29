@@ -604,5 +604,7 @@ with tab1:
             st.markdown("--&emsp; TH1X = " +str(volume_LB*nb_psp)+" µL <br> --&emsp; Enzyme EndoV = " +str(volume_LB*nb_psp*0.081)+" µL", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff9b8e;'>Isopropanol = " +str(volume_Isop*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ffaca1;'>Ethanol = " +str(volume_Eth*nb_psp)+" µL</span>", unsafe_allow_html=True)
-
-    st.text('Number of tips = '+ str(nombre_tip))
+    with col4 :
+        st.subheader('*Number of tips = '+ str(nombre_tip))
+        st.markdown('**Number of tips = '+ str(nombre_tip)'**')
+  
