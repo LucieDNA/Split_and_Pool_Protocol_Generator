@@ -573,4 +573,5 @@ with tab1:
         st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1+volume_W1_2)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270)+" µL</span>", unsafe_allow_html=True)
     st.text('Number of tips = '+ str(nombre_tip))
