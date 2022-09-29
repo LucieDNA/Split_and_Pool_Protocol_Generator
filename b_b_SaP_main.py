@@ -248,20 +248,20 @@ volume_W2 = int((0.05 * number_of_cycle+0.15)*1000)
 
 
 if number_of_cycle <= 6:
-    volume_Ps_split_1 = str(int(270* number_of_cycle+200))
-    volume_Ps_split_2 = str(0)
-    volume_Ps_split_3 = str(0)
+    volume_Ps_split_1 = int(270* number_of_cycle+200)
+    volume_Ps_split_2 = 0
+    volume_Ps_split_3 = 0
 if 6 < number_of_cycle <= 12:
-    volume_Ps_split_1 = str(int(270 * 6+200))
-    volume_Ps_split_2 = str(int(270 * (number_of_cycle-6)+200))
-    volume_Ps_split_3 = str(0)
+    volume_Ps_split_1 = int(270 * 6+200)
+    volume_Ps_split_2 = int(270 * (number_of_cycle-6)+200)
+    volume_Ps_split_3 = 0
 if 12 < number_of_cycle <= 19:
-    volume_Ps_split_1 = str(int(270*6+200))
-    volume_Ps_split_2 = str(int(270* 6+200))
-    volume_Ps_split_3 = str(int(270* (number_of_cycle-6*2)+200))
+    volume_Ps_split_1 = int(270*6+200)
+    volume_Ps_split_2 = int(270* 6+200)
+    volume_Ps_split_3 = int(270* (number_of_cycle-6*2)+200)
 
-volume_Ps_pool = str(int(270/4 * number_of_cycle+150))
-volume_Ps_pool_1 = str(int(270/4 * number_of_cycle+150+270))
+volume_Ps_pool = int(270/4 * number_of_cycle+150)
+volume_Ps_pool_1 = int(270/4 * number_of_cycle+150+270)
 pooling_solution = 'W2'
 
 volume_A = 0
@@ -352,24 +352,24 @@ if simple_psp or double_psp:
 if nb_psp == 2:
     table_volume[7,6] = text_Eth
 
-table_volume[0,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
-table_volume[1,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
-table_volume[2,11] = pooling_solution+" = " +volume_Ps_split_1+" µL"
-table_volume[3,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
-table_volume[4,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
-table_volume[5,11] = pooling_solution+" = " +volume_Ps_split_2+" µL"
-table_volume[6,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
-table_volume[7,11] = pooling_solution+" = " +volume_Ps_split_3+" µL"
-table_volume[7,10] = pooling_solution+" = " +volume_Ps_split_3+" µL"
+table_volume[0,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
+table_volume[1,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
+table_volume[2,11] = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
+table_volume[3,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
+table_volume[4,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
+table_volume[5,11] = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
+table_volume[6,11] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
+table_volume[7,11] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
+table_volume[7,10] = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
 for i in range(4):
     table_volume[i,1] = text_E
     table_volume[i,2] = text_W1
     table_volume[i,3] = text_D
     table_volume[i,4] = text_W2
-    table_volume[i,8] = pooling_solution+" = " +volume_Ps_pool+" µL"
-    table_volume[i,9] = pooling_solution+" = " +volume_Ps_pool+" µL"
-    table_volume[i,10] = pooling_solution+" = " +volume_Ps_pool+" µL"
-table_volume[0,8] = pooling_solution+" = " +volume_Ps_pool_1+" µL"
+    table_volume[i,8] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
+    table_volume[i,9] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
+    table_volume[i,10] = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
+table_volume[0,8] = pooling_solution+" = " +str(volume_Ps_pool_1)+" µL"
 
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
