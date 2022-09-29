@@ -575,10 +575,10 @@ with tableau_2:
 
 
 table_filter = np.full((8,12), '                      ')
-table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1'
-table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], table_filter[3,2], = 2, 2, 2, 2, 2
-table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 3, 3, 3, 3, 3
-table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 4, 4, 4, 4, 4
+table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1'
+table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], table_filter[3,2], = 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2'
+table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3'
+table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4'
 
 df = pd.DataFrame(
     table_filter,
