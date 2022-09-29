@@ -569,7 +569,7 @@ with tab1:
         st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X)+" µL</span>", unsafe_allow_html=True)
     with col2:
         st.markdown('**Buffer**')
-        st.markdown('Elongation buffer = ' +str(volume_enzyme+volume_E_2)+" µL")
+        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2)+" µL</span>", unsafe_allow_html=True)
         st.markdown('Wash 1 = ' +str(volume_W1+volume_W1_2)+" µL")
         st.markdown('Deblock = ' +str(volume_D+volume_D_2*2)+" µL")
         st.markdown('Wash 2 = ' +str(volume_W2+volume_W2_2)+" µL")
