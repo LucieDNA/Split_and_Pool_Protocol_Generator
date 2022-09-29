@@ -576,6 +576,15 @@ with tableau_2:
 
 table_filter = np.full((8,12), '                      ')
 table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 1, 1, 1, 1, 1
+
+
+df = pd.DataFrame(
+    table_filter,
+    index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
+    columns=(str(i) for i in range(1,13)))
+
+with tableau_3:
+    st.dataframe(df, width=3000)
                                                  
                                                  
 with tab1:
