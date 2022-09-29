@@ -569,7 +569,7 @@ for row in table_tip:
             nombre_tip += 1
 
 with tableau_2:
-    table_2 = st.dataframe(df.style.applymap(color_tips), use_container_width=True)
+    st.dataframe(df.style.applymap(color_tips), width=None, height=None, *, use_container_width=True)
 
 
 with tab1:
