@@ -597,4 +597,8 @@ with tab1:
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
         st.markdown("* Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL", unsafe_allow_html=True)
         st.markdown("* Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
+    with col4:
+        st.markdown('**Reagents for PSP**')
+        st.markdown("<span style='background-color: #ff5843;'>H_2O = " +str(volume_eau*nb_psp)+" µL :</span>", unsafe_allow_html=True)
+
     st.text('Number of tips = '+ str(nombre_tip))
