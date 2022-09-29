@@ -587,17 +587,14 @@ with tab1:
             st.markdown("<span style='background-color: #d5d8fb;'>ideoxyI = " +str(volume_X*nb_end_well)+" µL</span>", unsafe_allow_html=True)
     with col2:
         st.markdown('**Buffer**')
-        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
+        st.markdown("--&emsp; Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL <br> --&emsp; Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1+volume_W1_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270*nb_end_well)+" µL</span>", unsafe_allow_html=True)
-    with col3:
-        st.markdown('**Elongation buffer preparation**')
-        st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2*nb_end_well)+" µL :</span>", unsafe_allow_html=True)
-        st.markdown("--&emsp; Enzyme M96 = " +str((volume_enzyme+volume_E_2*nb_end_well)*1/5)+" µL <br> --&emsp; Enzyme buffer = " +str((volume_enzyme+volume_E_2*nb_end_well)*4/5)+" µL", unsafe_allow_html=True)
     if simple_psp or double_psp:
-        with col4:
+        with col3:
             st.markdown('**Reagents for PSP**')
             st.markdown("<span style='background-color: #ff5843;'>H<sub>2</sub>O = " +str(volume_eau*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff6956;'>TSTPK = " +str(volume_TSTPK*nb_psp)+" µL : </span>", unsafe_allow_html=True)
