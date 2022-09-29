@@ -612,11 +612,11 @@ if number_of_cycle >= 16:
     table_filter[7,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
 
 if number_of_cycle >= 17:
-    table_filter[4,8], table_filter[4,8], table_filter[5,8], table_filter[6,8], table_filter[7,8], = 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17'
+    table_filter[4,8], table_filter[4,9], table_filter[5,9], table_filter[6,9], table_filter[7,9], = 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17'
 if number_of_cycle >= 18:
-    table_filter[5,8], table_filter[4,9], table_filter[5,9], table_filter[6,9], table_filter[7,9], = 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18'
+    table_filter[5,8], table_filter[4,10], table_filter[5,10], table_filter[6,10], table_filter[7,10], = 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18'
 if number_of_cycle >= 19:
-    table_filter[6,8], table_filter[4,10], table_filter[5,10], table_filter[6,10], table_filter[7,10], = 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19'
+    table_filter[6,8], table_filter[4,11], table_filter[5,11], table_filter[6,11], table_filter[7,11], = 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19'
 
 
 def color_filter(cell):
