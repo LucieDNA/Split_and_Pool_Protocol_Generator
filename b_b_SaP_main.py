@@ -571,6 +571,6 @@ with tab1:
         st.markdown('**Buffer**')
         st.markdown("<span style='background-color: #e3beca;'>Elongation buffer = " +str(volume_enzyme+volume_E_2)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f1d77f;'>Wash 1 = " +str(volume_W1+volume_W1_2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #f1d77f;'Deblock = " +str(volume_D+volume_D_2*2)+" µL</span>", unsafe_allow_html=True)
-        st.markdown("<span style='background-color: #f1d77f;'>Wash 2 = " +str(volume_W2+volume_W2_2)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2)+" µL</span>", unsafe_allow_html=True)
+        st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2)+" µL</span>", unsafe_allow_html=True)
     st.text('Number of tips = '+ str(nombre_tip))
