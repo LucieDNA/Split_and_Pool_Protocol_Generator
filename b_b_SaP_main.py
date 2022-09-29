@@ -575,27 +575,41 @@ with tableau_2:
 
 
 table_filter = np.full((8,12), '                      ')
-table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1'
-table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], table_filter[3,2], = 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2'
-table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3'
-table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4'
+if number_of_cycle >= 1:
+    table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1'
+if number_of_cycle >= 2:
+    table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], table_filter[3,2], = 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2'
+if number_of_cycle >= 3:
+    table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3'
+if number_of_cycle >= 4:
+    table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4'
 
+if number_of_cycle >= 5:
+    table_filter[0,5], table_filter[0,6], table_filter[1,6], table_filter[2,6], table_filter[3,6], = 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5'
+if number_of_cycle >= 6:
+    table_filter[1,5], table_filter[0,7], table_filter[1,7], table_filter[2,7], table_filter[3,7], = 'Cycle 6', 'Cycle 6', 'Cycle 6', 'Cycle 6', 'Cycle 6'
+if number_of_cycle >= 7:
+    table_filter[2,5], table_filter[0,8], table_filter[1,8], table_filter[2,8], table_filter[3,8], = 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7'
+if number_of_cycle >= 8:
+    table_filter[3,5], table_filter[0,9], table_filter[1,9], table_filter[2,9], table_filter[3,9], = 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8'
 
-table_filter[0,5], table_filter[0,6], table_filter[1,6], table_filter[2,6], table_filter[3,6], = 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5'
-table_filter[1,5], table_filter[0,7], table_filter[1,7], table_filter[2,7], table_filter[3,7], = 'Cycle 6', 'Cycle 6', 'Cycle 6', 'Cycle 6', 'Cycle 6'
-table_filter[2,5], table_filter[0,8], table_filter[1,8], table_filter[2,8], table_filter[3,8], = 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7'
-table_filter[3,5], table_filter[0,9], table_filter[1,9], table_filter[2,9], table_filter[3,9], = 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8'
+if number_of_cycle >= 9:
+    table_filter[0,10], table_filter[0,11], table_filter[1,11], table_filter[2,11], table_filter[3,11], = 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9'
+if number_of_cycle >= 10:
+    table_filter[1,10], table_filter[4,0], table_filter[5,0], table_filter[6,0], table_filter[7,0], = 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10'
+if number_of_cycle >= 11:
+    table_filter[2,10], table_filter[4,1], table_filter[5,1], table_filter[6,1], table_filter[7,1], = 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11'
+if number_of_cycle >= 12:
+    table_filter[3,10], table_filter[4,2], table_filter[5,2], table_filter[6,2], table_filter[7,2], = 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12'
 
-
-table_filter[0,10], table_filter[0,11], table_filter[1,11], table_filter[2,11], table_filter[3,11], = 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9'
-table_filter[1,10], table_filter[4,0], table_filter[5,0], table_filter[6,0], table_filter[7,0], = 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10'
-table_filter[2,10], table_filter[4,1], table_filter[5,1], table_filter[6,1], table_filter[7,1], = 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11'
-table_filter[3,10], table_filter[4,2], table_filter[5,2], table_filter[6,2], table_filter[7,2], = 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12'
-
-table_filter[4,3], table_filter[4,4], table_filter[5,4], table_filter[6,4], table_filter[7,4], = 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13'
-table_filter[5,3], table_filter[4,5], table_filter[5,5], table_filter[6,5], table_filter[7,5], = 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14'
-table_filter[6,3], table_filter[4,6], table_filter[5,6], table_filter[6,6], table_filter[7,6], = 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15'
-table_filter[7,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
+if number_of_cycle >= 13:
+    table_filter[4,3], table_filter[4,4], table_filter[5,4], table_filter[6,4], table_filter[7,4], = 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13'
+if number_of_cycle >= 14:
+    table_filter[5,3], table_filter[4,5], table_filter[5,5], table_filter[6,5], table_filter[7,5], = 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14'
+if number_of_cycle >= 15:
+    table_filter[6,3], table_filter[4,6], table_filter[5,6], table_filter[6,6], table_filter[7,6], = 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15'
+if number_of_cycle >= 16:
+    table_filter[7,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
 
 
 def color_filter(cell):
