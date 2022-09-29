@@ -574,7 +574,7 @@ with tableau_2:
                                                 
 
 
-table_filter = np.full((8,12), '                      ')
+table_filter = np.full((8,12), '                  ')
 if number_of_cycle >= 1:
     table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1'
 if number_of_cycle >= 2:
