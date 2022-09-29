@@ -602,58 +602,59 @@ if number_of_cycle == 6:
     table_filter[2,5] = 'Sample'
 if number_of_cycle >= 7:
     table_filter[2,5], table_filter[0,8], table_filter[1,8], table_filter[2,8], table_filter[3,8], = 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7', 'Cycle 7'
-if number_of_cycle == 8:
+if number_of_cycle == 7:
     table_filter[3,5] = 'Sample'
 if number_of_cycle >= 8:
     table_filter[3,5], table_filter[0,9], table_filter[1,9], table_filter[2,9], table_filter[3,9], = 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8', 'Cycle 8'
 
-if number_of_cycle == 9:
+if number_of_cycle == 8:
     table_filter[0,10] = 'Sample'
 if number_of_cycle >= 9:
     table_filter[0,10], table_filter[0,11], table_filter[1,11], table_filter[2,11], table_filter[3,11], = 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9', 'Cycle 9'
-if number_of_cycle == 10:
+if number_of_cycle == 9:
     table_filter[1,10] = 'Sample'
 if number_of_cycle >= 10:
     table_filter[1,10], table_filter[4,0], table_filter[5,0], table_filter[6,0], table_filter[7,0], = 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10', 'Cycle 10'
-if number_of_cycle == 11:
+if number_of_cycle == 10:
     table_filter[2,10] = 'Sample'
 if number_of_cycle >= 11:
     table_filter[2,10], table_filter[4,1], table_filter[5,1], table_filter[6,1], table_filter[7,1], = 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11', 'Cycle 11'
-if number_of_cycle == 12:
+if number_of_cycle == 11:
     table_filter[3,10] = 'Sample'
 if number_of_cycle >= 12:
     table_filter[3,10], table_filter[4,2], table_filter[5,2], table_filter[6,2], table_filter[7,2], = 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12', 'Cycle 12'
 
-if number_of_cycle == 13:
+if number_of_cycle == 12:
     table_filter[4,3] = 'Sample'
 if number_of_cycle >= 13:
     table_filter[4,3], table_filter[4,4], table_filter[5,4], table_filter[6,4], table_filter[7,4], = 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13', 'Cycle 13'
-if number_of_cycle == 14:
+if number_of_cycle == 13:
     table_filter[5,3] = 'Sample'
 if number_of_cycle >= 14:
     table_filter[5,3], table_filter[4,5], table_filter[5,5], table_filter[6,5], table_filter[7,5], = 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14', 'Cycle 14'
-if number_of_cycle == 15:
+if number_of_cycle == 14:
     table_filter[6,3] = 'Sample'
 if number_of_cycle >= 15:
     table_filter[6,3], table_filter[4,6], table_filter[5,6], table_filter[6,6], table_filter[7,6], = 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15', 'Cycle 15'
-if number_of_cycle == 16:
+if number_of_cycle == 15:
     table_filter[7,3] = 'Sample'
 if number_of_cycle >= 16:
     table_filter[7,3], table_filter[4,7], table_filter[5,7], table_filter[6,7], table_filter[7,7], = 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16', 'Cycle 16'
 
-if number_of_cycle == 17:
+if number_of_cycle == 16:
     table_filter[4,8] = 'Sample'
 if number_of_cycle >= 17:
     table_filter[4,8], table_filter[4,9], table_filter[5,9], table_filter[6,9], table_filter[7,9], = 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17', 'Cycle 17'
-if number_of_cycle == 18:
+if number_of_cycle == 17:
     table_filter[5,8] = 'Sample'
 if number_of_cycle >= 18:
     table_filter[5,8], table_filter[4,10], table_filter[5,10], table_filter[6,10], table_filter[7,10], = 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18', 'Cycle 18'
-if number_of_cycle == 19:
+if number_of_cycle == 18:
     table_filter[6,8] = 'Sample'
 if number_of_cycle >= 19:
     table_filter[6,8], table_filter[4,11], table_filter[5,11], table_filter[6,11], table_filter[7,11], = 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19', 'Cycle 19'
-
+if number_of_cycle == 19:
+    table_filter[7,8] = 'Sample'
 
 def color_filter(cell):
     for i in range(1, number_of_cycle+1):
