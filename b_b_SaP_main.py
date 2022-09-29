@@ -574,7 +574,7 @@ with tableau_2:
 
 with tab1:
     st.subheader('Reagents total volumes')
-    col1, col2 = st.columns(2)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown("**Nucleotides**")
         st.markdown("<span style='background-color: #ebe7f2;'>dATP = " +str(volume_nucleotide+volume_A*nb_end_well)+" µL</span>", unsafe_allow_html=True)
@@ -592,4 +592,6 @@ with tab1:
         st.markdown("<span style='background-color: #c9d3be;'>Deblock = " +str(volume_D+volume_D_2*2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #f8c891;'>Wash 2 = " +str(volume_W2+volume_W2_2*nb_end_well)+" µL</span>", unsafe_allow_html=True)
         st.markdown("<span style='background-color: #b3c5da;'>Wash 2 for transfer = " +str(volume_Ps_split_1*3+volume_Ps_split_2*3+volume_Ps_split_3*3+volume_Ps_pool*3*4+270*nb_end_well)+" µL</span>", unsafe_allow_html=True)
+    with col3:
+        st.markdown('**Buffer with enzymes preparation**')
     st.text('Number of tips = '+ str(nombre_tip))
