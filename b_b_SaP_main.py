@@ -323,7 +323,7 @@ text_W2 = "W2 = " + str(volume_W2)+" µL"
 text_E_2 = "E = " + str(volume_E_2)+" µL"
 text_W1_2 = "W1 = " + str(volume_W1_2)+" µL"
 text_D_2 = "D = " + str(volume_D_2)+" µL"
-text_W2_2 = "W2 = " + str(volume_W2_2)+" µL  "
+text_W2_2 = "W2 = " + str(volume_W2_2)+" µL "
 
 nb_psp = 0
 if simple_psp:
