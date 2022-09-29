@@ -337,10 +337,8 @@ text_LB = "LB = " + str(volume_LB*nb_psp) +" µL"
 text_Isop = "Isop = " + str(volume_Isop*nb_psp) +" µL"
 text_Eth = "Eth = " + str(volume_Eth) +" µL"
 text_split_1 = pooling_solution+" = " +str(volume_Ps_split_1)+" µL"
-if 6 < number_of_cycle:
-    text_split_2 = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
-if 12 < number_of_cycle:
-    text_split_3 = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
+text_split_2 = pooling_solution+" = " +str(volume_Ps_split_2)+" µL"
+text_split_3 = pooling_solution+" = " +str(volume_Ps_split_3)+" µL"
 text_pool = pooling_solution+" = " +str(volume_Ps_pool)+" µL"
 text_pool_1 = pooling_solution+" = " +str(volume_Ps_pool_1)+" µL"
 
@@ -365,12 +363,14 @@ if nb_psp == 2:
 table_volume[0,11] = text_split_1
 table_volume[1,11] = text_split_1
 table_volume[2,11] = text_split_1
-table_volume[3,11] = text_split_2
-table_volume[4,11] = text_split_2
-table_volume[5,11] = text_split_2
-table_volume[6,11] = text_split_3
-table_volume[7,11] = text_split_3
-table_volume[7,10] = text_split_3
+if 6 < number_of_cycle:
+    table_volume[3,11] = text_split_2
+    table_volume[4,11] = text_split_2
+    table_volume[5,11] = text_split_2
+if 12 < number_of_cycle:
+    table_volume[6,11] = text_split_3
+    table_volume[7,11] = text_split_3
+    table_volume[7,10] = text_split_3
 for i in range(4):
     table_volume[i,1] = text_E
     table_volume[i,2] = text_W1
