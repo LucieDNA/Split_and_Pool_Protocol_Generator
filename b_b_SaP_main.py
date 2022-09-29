@@ -577,13 +577,21 @@ with tableau_2:
 table_filter = np.full((8,12), '                  ')
 if number_of_cycle >= 1:
     table_filter[0,0], table_filter[0,1], table_filter[1,1], table_filter[2,1], table_filter[3,1], = 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1', 'Cycle 1'
+if number_of_cycle = 1:
+    table_filter[1,0] = 'Sample'
 if number_of_cycle >= 2:
     table_filter[1,0], table_filter[0,2], table_filter[1,2], table_filter[2,2], table_filter[3,2], = 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2', 'Cycle 2'
+if number_of_cycle = 2:
+    table_filter[2,0] = 'Sample'
 if number_of_cycle >= 3:
     table_filter[2,0], table_filter[0,3], table_filter[1,3], table_filter[2,3], table_filter[3,3], = 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3', 'Cycle 3'
+if number_of_cycle = 3:
+    table_filter[3,0] = 'Sample'
 if number_of_cycle >= 4:
     table_filter[3,0], table_filter[0,4], table_filter[1,4], table_filter[2,4], table_filter[3,4], = 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4', 'Cycle 4'
-
+if number_of_cycle = 4:
+    table_filter[0,5] = 'Sample'
+    
 if number_of_cycle >= 5:
     table_filter[0,5], table_filter[0,6], table_filter[1,6], table_filter[2,6], table_filter[3,6], = 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5', 'Cycle 5'
 if number_of_cycle >= 6:
