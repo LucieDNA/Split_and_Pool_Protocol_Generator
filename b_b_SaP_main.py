@@ -445,8 +445,8 @@ df = pd.DataFrame(
     columns=(str(i) for i in range(1,13)))
 
 tab1, tableau_1, tableau_2, tableau_3 = st.tabs(['Main', 'Reagents plate', 'Tip rack', 'FilterPlate layout'])
-with tableau_1:
-    table = st.dataframe(df.style.applymap(color_reageants), width=1500)
+#with tableau_1:
+#    table = st.dataframe(df.style.applymap(color_reageants), width=1500)
 
     
 table_tip = np.full((8,12), '                      ')
@@ -706,6 +706,6 @@ with tab1:
             st.markdown("--&emsp; TH1X = " +str(volume_LB*nb_psp)+" µL <br> --&emsp; Enzyme EndoV = " +str(volume_LB*nb_psp*0.081)+" µL", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ff9b8e;'>Isopropanol = " +str(volume_Isop*nb_psp)+" µL</span>", unsafe_allow_html=True)
             st.markdown("<span style='background-color: #ffaca1;'>Ethanol = " +str(volume_Eth*nb_psp)+" µL</span>", unsafe_allow_html=True)
-
+    table = st.dataframe(df.style.applymap(color_reageants), width=1500)
         
   
