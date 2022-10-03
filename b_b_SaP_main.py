@@ -444,7 +444,7 @@ df_reageants = pd.DataFrame(
     index=('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'),
     columns=(str(i) for i in range(1,13)))
 
-tab1, tableau_1, tableau_2, tableau_3 = st.tabs(['Main', 'Reagents plate', 'Tip rack', 'FilterPlate layout'])
+tab1, tableau_2, tableau_3 = st.tabs(['Reagents plate', 'Tip rack', 'FilterPlate layout'])
 #with tableau_1:
 #    table = st.dataframe(df.style.applymap(color_reageants), width=1500)
 
