@@ -203,7 +203,7 @@ def psp_for_SaP(protocolFile, multi_pipet, single_pipet, labware_list, MARC_COMP
     startStirring(protocolFile, MARC_COMPORT)
     return_WL(protocolFile, pipet300_single)
     delay_WL(protocolFile, seconds=30, minutes=29)
-    pickup_tips_multi_WL(protocolFile, pipet300_multi, tips_300, 22)
+    pickup_tips_multi_WL(protocolFile, pipet300_multi, tips_300, 23)
     pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, 72)
     aspirate_PSP_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 39, AIR_GAP_VOL, ASP_FLOW_RATE)
     aspirate_SaP_WL(protocolFile, pipet300_multi, ReagentReservoir, 39, 100, ASP_FLOW_RATE)
