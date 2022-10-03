@@ -264,13 +264,13 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
             delay_WL(protocolFile, 6, 0)
             stopVac(protocolFile, MARC_COMPORT)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
-            aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 36, 200, ASP_FLOW_RATE)
+            aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 36, 280, ASP_FLOW_RATE)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
             stopVent(protocolFile, MARC_COMPORT)
 
             ## Wash 2
-            dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 100 + AIR_GAP_VOL, DISP_FLOW_RATE)
-            dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 100 + AIR_GAP_VOL, DISP_FLOW_RATE)
+            dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 140 + AIR_GAP_VOL, DISP_FLOW_RATE)
+            dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 140 + AIR_GAP_VOL, DISP_FLOW_RATE)
             blow_out_WL(protocolFile, pipet300_single)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
