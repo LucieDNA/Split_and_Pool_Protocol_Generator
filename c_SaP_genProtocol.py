@@ -302,7 +302,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
         double_psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)
     if single_psp:
         vacuum(protocolFile, MARC_COMPORT, 25)
-        pool_well = 70
+        pool_well = 93
         psp_for_SaP(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, well_psp)    
         
     # STOP HEATING
