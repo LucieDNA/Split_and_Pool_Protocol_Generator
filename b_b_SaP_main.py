@@ -168,8 +168,8 @@ with error_pipette:
 
 with st.sidebar:
     st.header('Advanced parameters')
-    st.subheader('Control synthesis')
-    control_synth = st.checkbox('Control sample in well 71')
+    st.subheader('End-seq synthesis')
+    control_synth = st.checkbox('Duplicate end-seq synthesis')
     st.subheader('Post Synthesis Process')
     well_psp = None
     warning = st.container()
