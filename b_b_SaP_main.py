@@ -66,7 +66,7 @@ col1, col2 = st.columns([1.5, 1.5])
 with col1:
     start_seq = st.text_input('Addition of sequence at the beginning of the barcodes', '')
 with col2:
-    end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'ATCGAATCGGCAAGCAGAAGACGGCATA')
+    end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'UUUUUUTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT')
     
 if support == 'Magnetic beads':
     duration = convert(20 * number_of_cycle+10*(len(start_seq)+len(end_seq)))
