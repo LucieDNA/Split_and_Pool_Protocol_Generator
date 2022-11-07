@@ -40,7 +40,7 @@ image_filter_grenier = Image.open("images/Grenier.PNG")
 col1, col1_5, col2, col3, col4 = st.columns([1.5, 1, 1.5, 0.9, 1.4], gap="medium")
 
 with col1:
-    number_of_cycle = st.slider('Barcode length', min_value = 0, max_value = 19, value = 18)
+    number_of_cycle = st.slider('Barcode length', min_value = 0, max_value = 19, value = 12)
     #conc_beads = st.text_input('Concentration of the resin in beads', '100000000', help='in beads/mL')
     #number_beads = st.number_input('Desired number of barcoded beads', 0, max_value=None, value=20000000, step=10000000)
 
@@ -66,8 +66,8 @@ col1, col2 = st.columns([1.5, 1.5])
 with col1:
     start_seq = st.text_input('Addition of sequence at the beginning of the barcodes', '')
 with col2:
-    #end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'UUUUUUTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT')
-    end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'ATTAACTGAGCTGAGTCTGGGC')
+    end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'UUUUUUTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT')
+    #end_seq = st.text_input('Addition of sequence at the end of the barcodes', 'ATTAACTGAGCTGAGTCTGGGC')
     
     
 if support == 'Magnetic beads':
