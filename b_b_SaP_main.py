@@ -384,6 +384,7 @@ for i in range(4):
 table_volume[0,8] = text_pool_1
 if nb_end_well == 2:
     table_volume[1,8] = text_pool_1
+    table_volume[2,8] = text_pool_1
 
 if end_seq != '' or start_seq != '':
     table_volume[4,1] = text_E_2
