@@ -75,10 +75,8 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
             add_end_seq_2(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
         else:
             add_end_seq(protocolFile, pipet300_multi, pipet300_single, labware_list, MARC_COMPORT, pool_well, start_seq)
- 
-    if control_synth:
-        pause_WL(protocolFile)
-    
+
+            
     # Full cycle 1
     current_cycle += 1
     if current_cycle <= number_of_cyle:
@@ -285,7 +283,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
             delay_WL(protocolFile, 6, 0)
             stopVac(protocolFile, MARC_COMPORT)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
-            aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 36, 100, ASP_FLOW_RATE)
+            aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 66, 100, ASP_FLOW_RATE)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
             stopVent(protocolFile, MARC_COMPORT)
 
