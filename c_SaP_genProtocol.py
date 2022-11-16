@@ -244,7 +244,7 @@ def genProtocol(general_parameters, labware_list_and_loc, pipetting_condition, p
             blow_out_WL(protocolFile, pipet300_single)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
             return_WL(protocolFile, pipet300_single)
-            pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, current_cycle)
+            pickup_tips_single_WL(protocolFile, pipet300_single, tips_300, number_of_cyle)
             mix_SaP_WL(protocolFile, pipet300_single, 5, 150, FilterPlate, pool_well, 6)
             air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
             aspirate_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 100, ASP_FLOW_RATE)
