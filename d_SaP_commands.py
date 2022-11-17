@@ -1,6 +1,6 @@
 from e_SaP_elementaryCommands import *
 
-speed_fast = 1300
+speed_fast = 1050
 speed_slow = 900
 first_volume = 80
 second_volume = 180
