@@ -66,7 +66,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
     comment_WL(protocolFile, "Addition of "+ base)
     ## Nucleotide
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     return_WL(protocolFile, pipet300_single)
@@ -79,7 +79,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
         aspirate_SaP_WL(protocolFile, pipet300_single, ReagentReservoir, 13, 50, 1.5)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 25 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
@@ -105,7 +105,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
 
     ## Wash 1
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
@@ -130,7 +130,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
 
     ## Deblock 1
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
@@ -149,7 +149,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
 
     ## Deblock 2
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
@@ -175,7 +175,7 @@ def add_single_nuc_2(protocolFile, multi_pipet, single_pipet, labware_list, MARC
 
     ## Wash 2
     dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
-    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, 71, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
+    dispense_SaP_WL(protocolFile, pipet300_single, FilterPlate, pool_well+1, 50 + 1 * AIR_GAP_VOL, DISP_FLOW_RATE)
     blow_out_WL(protocolFile, pipet300_single)
     air_gap_WL(protocolFile, pipet300_single, AIR_GAP_VOL)
 
